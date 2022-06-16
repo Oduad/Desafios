@@ -54,8 +54,9 @@ function productosDisponibles() {
 
 do {
     do {
-        opcion = parseInt(prompt("¿Qué tipo de productos necesita?\nIngresa 1 para ganadores de masa.\nIngresa 2 para proteínas\nIngresa 3 para snacks.\nIngresa 4 para ver todos los productos disponibles\nIngresa 5 para ver productos de un precio específico\nIngresa 6 para ver los productos elegidos\nIngresa otro número para salir"));
-    } while (opcion < 0 && option > 6);
+        opcion = parseInt(prompt("¿Qué tipo de productos necesita?\nIngresa 1 para ganadores de masa.\nIngresa 2 para proteínas\nIngresa 3 para snacks.\nIngresa 4 para ver todos los productos disponibles\nIngresa 5 " + 
+        "para ver productos de un precio específico\nIngresa 6 para ver los productos elegidos\nIngresa 7 para encontrar un producto por su nombre\nIngresa otro número para salir"));
+    } while (opcion < 0 && option > 7);
 
     switch (opcion) {
         case 1:
@@ -82,7 +83,11 @@ do {
             break;
         case 6:
             console.log(`${nombre} ${apellido}!, ha elegido mostrar productos elegidos por un cliente.`);
-            mostrarProductos();
+            productosElegidos();
+            break;
+            case 7:
+            console.log(`${nombre} ${apellido}!, ha elegido mostrar producto por nombre específico.`);
+            productoPorNombre();
             break;
         default:
             console.log(`${nombre} ${apellido}!, ha elegido salir.`);
@@ -192,9 +197,9 @@ function elegirSn() {
     console.log(`${nombre} ${apellido}, pagará un total de $${precioT}`);
 }
 
-/*Médoto agregado para el segundo desafío complementario que espira hoy 13/2022*/
+/*Método para mostrar todos los productos de la tienda*/
 function mostrarProductos() {
-    console.log("El cliente ha elegido los siguientes productos: ");
+    console.log("Los productos disponibles en la tienda son los siguientes: ");
     for (let index = 0; index < productosDeTienda.length; index++) {
         console.log(productosDeTienda[index]);
     };
@@ -214,6 +219,24 @@ function buscarProductoPorPrecio() {
     preciosIguales.forEach(element => console.log(element));
 }
 
+/*Método para mostrar todos los productos elegidos por el cliente*/
+function productosElegidos() {
+    console.log("El cliente ha adquirido los siguientes productos: ");
+    for (let index = 0; index < productos.length; index++) {
+        console.log(productos[index]);
+    };
+}
+
+function productoPorNombre() {
+    nombrePropuesto = prompt("¿Qué producto quieres encontrar?");
+    let productoSeleccionado = productosDeTienda.find(producto => producto.nombre == nombrePropuesto);
+    console.log("Detalles del artículo] ");
+    console.table(productoSeleccionado)
+}
+
+
+/* Estos métodos apenas se van a implementar
+
 function menorPrecio() {
     precioPropuesto = parseInt(prompt("¿Productos menores a qué precio quieres ver?"));
 
@@ -226,7 +249,11 @@ function menorPrecio() {
     console.table(articulosMenoresAPrecio);
 }
 
-/*Poner métodos para mostrar nombres, precios, marcas*/
+function encontrarProducto() {
+    nombrePropuesto = prompt("¿Qué producto quieres encontrar?");
+    let productoSeleccionado = productosDeTienda.find(producto => producto.nombre == nombrePropuesto);
+    console.log("Detalles del artículo] ");
+    console.table(productoSeleccionado)
+}*/
 
-/*Poner métodos para mostrar productos según sus precios*/
 

@@ -1,28 +1,31 @@
 :root{
-    --primary: #111B54;
+    /*--primary: #111B54;
     --light: #ffffff;
-    --gray: #efefef;
+    --gray: #efefef;*/
+    overflow-y: auto;
+    overflow-x: auto;
 }
+
+.color_header{
+    background-color: lightskyblue;
+}
+
+header{
+    background-color: lightskyblue;
+}
+
 
 body{
     overflow: hidden;
     font-family: 'Mulish' sans-serif;
     font-weight: 400;
-    color: var(--primary);
-}
-
-.lead{
-    font-size: 16px;
+    /*color: var(--primary);*/
 }
 
 a:hover{
     text-decoration: none;
     font-size: 17px;
     font-weight: 500;
-}
-
-.bg-primary{
-    background-color: var(--primary) !important;
 }
 
 #sidebar-container{
@@ -35,5 +38,25 @@ a:hover{
 
 #sidebar-container .menu{
     width: 18rem,
-
 }
+
+.center{
+    text-align: center;
+    align-items: center;
+}
+
+.formulario{
+text-align: center;
+}
+
+.form-control{
+    text-align: center;
+    width: 500px;
+    margin-left: 380px;
+}
+
+/*.collection-item{
+    font-weight: 300;
+    color: black;
+    outline-style: auto;
+}*/

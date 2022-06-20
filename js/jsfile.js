@@ -6,6 +6,9 @@ y el tipo del o los productos (A, B o C): */
 let nombre = prompt("Ingresa tu nombre: ");
 let apellido = prompt("Ingresa tu apellido: ");
 
+let titulo = document.getElementById("titulo");
+console.log(titulo.innerText);
+
 /*Definimos 4 variables para cada opción de los menús (Productos y tipos)*/
 let opcion;
 let respuesta;
@@ -250,9 +253,3 @@ function productoPorNombre(nombrePropuesto) {
     console.table(productoSeleccionado)
 }
 
-/*
-Duda 1: ¿Cómo puedo quitar el hardcode de la líneas 31 a 50?
-Duda 2: ¿Cómo puedo cambiar el mensaje que sale a partir de la elección de las opciones 4 ...?
-Duda 3: ¿Cómo pongo el método de la línea 219 resumido?
-Duda 4: ¿...
-*/

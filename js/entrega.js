@@ -30,7 +30,7 @@ const productosDeTienda = [];
 /*Definimos un array de objetos que son los productos adquiridos por el cliente*/
 const productos = [];
 
-const canasta = [];
+let canasta = [];
 
 /*Función para llenar el arreglo productosDeTienda */
 function productosDisponibles() {
@@ -94,7 +94,9 @@ function listarProductos() {
 listarProductos();
 
 /*Le asginamos la función de agregarProducto al botón del archivo HTML*/
-document.getElementById("boton").onclick = agregarProducto;
+document.getElementById("boton1").onclick = agregarProducto;
+document.getElementById("boton2").onclick = eliminarProducto;
+
 
 /*Las 3 funciones son para agregar elemento a la tabla. Los elementos son ingresados por el formulario*/
 
@@ -104,6 +106,17 @@ function agregarProducto() {
     let cantidad = document.getElementById("cantidad").value;
     let precio = document.getElementById("precio").value;
     canasta.push([generador(), producto, cantidad, precio]);
+    hacerTabla();
+}
+
+/*Función para eliminar un producto*/
+function eliminarProducto() {
+    let excluido = document.getElementById("producto").value;
+    canasta = canasta.filter((elemento) =>
+        elemento.producto != excluido
+    )
+    //debugger
+    console.table(canasta)
     hacerTabla();
 }
 
@@ -121,3 +134,19 @@ function generador() {
     return (Math.random() * 10).toFixed(0);
 }
 
+/*
+Comentario 1: Me llamó la atención el harcode línea 36
+Duda 1: ¿Cómo puedo quitar el hardcode de la líneas 31 a 50?
+Duda 2: ¿Cómo puedo cambiar el mensaje que sale a partir de la elección de las opciones 4 ...?
+Duda 3: ¿Cómo pongo el método de la línea 219 resumido?
+Duda 4: No se ve el archivo de CSS, pero lo vi en el código, ¿No lo pusiste por irrelevante? Sí estaba
+Duda 5: ¿Por qué no me reconoce la propiedad center de CSS?
+Duda 6: ¿Es buena mi idea de los carritos? Sí
+Duda 7: ¿Asume el tipo de valor true/false? Tiene que ver con línea 8
+Duda 8: ¿Por qué no me toma el color? No funciona 
+Duda 9: ¿Cómo rellenaríamos desde 81 si fueran objetos muy grandes(con muchas propiedades)?
+Duda 10: ¿Sería mala práctica poner los eventos en el archivo HTML? Sí
+Duda 11: ¿Cuál es la función anónima? 28:14 Clase 15/06s
+Duda 13: ¿Cómo pongo mi referencia a JS? Puede ser abajo o arriba con defer
+Duda 14: ¿Cómo elimino objetos? En eso ando. 
+*/

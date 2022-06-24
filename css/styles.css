@@ -1,25 +1,92 @@
-:root {
+*{
+    margin: 0;
+    padding: 0;;    
+    /*overflow-y:auto;
+    overflow-x: auto;*/
+}
+
+
+/*:root {
     /*--primary: #111B54;
     --light: #ffffff;
-    --gray: #efefef;*/
+    --gray: #efefef;
     overflow-y: auto;
     overflow-x: auto;
+}*/
+
+
+.menu-bar .navbar {
+    background-image: linear-gradient(-90deg, rgb(230, 230, 104), rgb(55, 194, 97));
+}
+
+/*Elementos del header en DESKTOP*/
+.nav-link {
+    font-size: 14px;
+    margin: 3px;
+    color: silver;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid seagreen;
+}
+
+.logo_header {
+    max-width: 90px;
+    margin-top: 1px;
+}
+
+.logo_header:hover {
+    max-width: 110px;
+    margin-top: 1px;
 }
 
 .color_header {
-    background-color: lightskyblue;
+    background-image: linear-gradient(-90deg, rgb(230, 230, 104), rgb(55, 194, 97));
 }
 
 header {
     background-color: lightskyblue;
 }
 
+.dropdown-menu{
+    background-image: linear-gradient(-90deg, rgb(230, 230, 104), rgb(55, 194, 97));
+}
+
+@media only screen and (max-width:1000px){
+    .nav-link:hover{
+        border-bottom: none!important;
+    }
+}
+
+.form{
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.formulario{
+    background-color: cornflowerblue;
+    max-width: 40vw;
+    justify-content: center;
+    position: relative;
+    left: 30%;
+    padding: 20px;
+}
 
 body {
-    overflow: hidden;
     font-family: 'Mulish' sans-serif;
-    font-weight: 400;
-    background-color: lightblue;
+    background-color: lightskyblue;
+    justify-content: center;
+}
+
+.imagen_index{
+    text-align: center;
 }
 
 a:hover {
@@ -78,6 +145,7 @@ a:hover {
     background-color: #a945c7;
     box-shadow: 0 0 10px #a945c7 0 0 40px #a945c7 0 0 80px #a945c7;
     transition-delay: 1s;
+    color: black;
 }
 
 .btn-neon span {
@@ -95,7 +163,7 @@ a:hover {
 
 .btn-neon:hover #span1 {
     left: 100%;
-    transition: 1s;
+    transition: 0.25s;
 }
 
 #span3 {
@@ -109,7 +177,7 @@ a:hover {
 .btn-neon:hover #span3 {
     right: 100%;
     transition: 1s;
-    transition-delay: 0.5s;
+    transition-delay: 0.25s;
 }
 
 #span2 {
@@ -122,8 +190,8 @@ a:hover {
 
 .btn-neon:hover #span2 {
     top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
+    transition: 0.25s;
+    transition-delay: 0.125s;
 }
 
 #span4 {
@@ -136,6 +204,11 @@ a:hover {
 
 .btn-neon:hover #span4 {
     bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
+    transition: 0.25s;
+    transition-delay: 0.125s;
+}
+
+/*Elementos del footer en DESKTOP*/
+.imagen_footer {
+    max-width: 90px;
 }

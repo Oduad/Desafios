@@ -1,8 +1,10 @@
 /*Definimos la clase Producto con 3 atributos y 2 métodos*/
 class Producto {
-    constructor(id, nombre, precio) {
+    constructor(id, nombre, marca, cantidad, precio) {
         this.id = id;
         this.nombre = nombre;
+        this.marca = marca;
+        this.cantidad = cantidad;
         this.precio = precio;
     }
     descuento() {
@@ -103,9 +105,10 @@ document.getElementById("boton2").onclick = eliminarProducto;
 /*Función para agregar un producto*/
 function agregarProducto() {
     let producto = document.getElementById("producto").value;
+    let marca = document.getElementById("marca").value;
     let cantidad = document.getElementById("cantidad").value;
     let precio = document.getElementById("precio").value;
-    canasta.push([generador(), producto, cantidad, precio]);
+    canasta.push(new Producto(generador(), producto, marca, cantidad, precio));
     hacerTabla();
 }
 
@@ -113,7 +116,7 @@ function agregarProducto() {
 function eliminarProducto() {
     let excluido = document.getElementById("producto").value;
     canasta = canasta.filter((elemento) =>
-        elemento.producto != excluido
+        elemento.nombre != excluido
     )
     //debugger
     console.table(canasta)
@@ -122,9 +125,9 @@ function eliminarProducto() {
 
 /*Con esta función se agrega el producto a la tabla*/
 function hacerTabla() {
-    let tabla = "<thead><tr><th>Identificador</th><th>Producto</th><th>Cantidad</th><th>Precio</th></tr></thead><tbody>"
+    let tabla = "<thead><tr><th>Identificador</th><th>Producto</th><th>Marca</th><th>Cantidad</th><th>Precio</th></tr></thead><tbody>"
     for (let i = 0; i < canasta.length; i++) {
-        tabla += `<tr><td>${canasta[i][0]}</td><td>${canasta[i][1]}</td><td>${canasta[i][2]}</td><td>${canasta[i][3]}</td></tr>`;
+        tabla += `<tr><td>${canasta[i].id}</td><td>${canasta[i].nombre}</td><td>${canasta[i].marca}</td><td>${canasta[i].cantidad}</td><td>${canasta[i].precio}</td></tr>`;
     }
     document.getElementById("factura").innerHTML = tabla;
 }
@@ -133,20 +136,3 @@ function hacerTabla() {
 function generador() {
     return (Math.random() * 10).toFixed(0);
 }
-
-/*
-Comentario 1: Me llamó la atención el harcode línea 36
-Duda 1: ¿Cómo puedo quitar el hardcode de la líneas 31 a 50?
-Duda 2: ¿Cómo puedo cambiar el mensaje que sale a partir de la elección de las opciones 4 ...?
-Duda 3: ¿Cómo pongo el método de la línea 219 resumido?
-Duda 4: No se ve el archivo de CSS, pero lo vi en el código, ¿No lo pusiste por irrelevante? Sí estaba
-Duda 5: ¿Por qué no me reconoce la propiedad center de CSS?
-Duda 6: ¿Es buena mi idea de los carritos? Sí
-Duda 7: ¿Asume el tipo de valor true/false? Tiene que ver con línea 8
-Duda 8: ¿Por qué no me toma el color? No funciona 
-Duda 9: ¿Cómo rellenaríamos desde 81 si fueran objetos muy grandes(con muchas propiedades)?
-Duda 10: ¿Sería mala práctica poner los eventos en el archivo HTML? Sí
-Duda 11: ¿Cuál es la función anónima? 28:14 Clase 15/06s
-Duda 13: ¿Cómo pongo mi referencia a JS? Puede ser abajo o arriba con defer
-Duda 14: ¿Cómo elimino objetos? En eso ando. 
-*/

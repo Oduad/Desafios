@@ -253,3 +253,35 @@ function productoPorNombre(nombrePropuesto) {
     console.table(productoSeleccionado)
 }
 
+/*
+Comentario 1: Me llamó la atención el harcode línea 36
+Duda 1: ¿Cómo puedo quitar el hardcode de la líneas 31 a 50?
+Duda 2: ¿Cómo puedo cambiar el mensaje que sale a partir de la elección de las opciones 4 ...?
+Duda 3: ¿Cómo pongo el método de la línea 219 resumido?
+Duda 4: No se ve el archivo de CSS, pero lo vi en el código, ¿No lo pusiste por irrelevante? Sí estaba
+Duda 5: ¿Por qué no me reconoce la propiedad center de CSS?
+Duda 6: ¿Es buena mi idea de los carritos? Sí
+Duda 7: ¿Asume el tipo de valor true/false? Tiene que ver con línea 8
+Duda 8: ¿Por qué no me toma el color? No funciona 
+Duda 9: ¿Cómo rellenaríamos desde 81 si fueran objetos muy grandes(con muchas propiedades)?
+Duda 10: ¿Sería mala práctica poner los eventos en el archivo HTML? Sí
+Duda 11: ¿Cuál es la función anónima? 28:14 Clase 15/06s
+Duda 13: ¿Cómo pongo mi referencia a JS? Puede ser abajo o arriba con defer
+Duda 14: ¿Cómo elimino objetos? En eso ando.
+Duda 15: ¿Dónde encuentro los mejores trabajos? 
+
+Duda 1: ¿Cómo puedo quitar el hardcode de la líneas 31 a 50? 
+En este punto lo que correspondería sería cargar la información de una fuente de datos 
+(base de datos, servicio u otro medio). Posiblemente pudiéramos fragmentar el código para 
+tener varios archivos y hacer más legible la rutina, pero difícilmente podríamos retirar 
+el hardcode sin una fuente de datos a la cual recurrir.
+
+Duda 2: ¿Cómo puedo cambiar el mensaje que sale a partir de la elección de las opciones 4 ...? 
+Quizás podamos mostrar información manipulando el DOM. Podríamos escribir todo en una división 
+o utilizar algún componente de Bootstrap. Lo platicamos.
+
+Duda 3: ¿Cómo pongo el método de la línea 219 resumido? Podríamos cambiar ese FOR que recorre
+índices por un FILTER. Sin embargo, lo que haces es adecuado y funciona. No es que uno sea mejor
+o peor, todo depende del gusto del desarrollador. Si lo hiciera desde 0, posiblemente elegiría un 
+FILTER ya que considero es más rápido de programar, pero si te gusta más un FOR a la medida, adelante.
+*/

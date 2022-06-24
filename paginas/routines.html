@@ -1,80 +1,105 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
-  <title>Rutinas</title>
-</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+  
+    <meta charset="UTF-8">
+    <!--La etiqueta meta es para responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Keywords-->
+    <meta name="keywords" content="">
+    <!--SEO Título-->
+    <title>Routines</title>
+    <!--SEO Keywords-->
+    <meta name="description" content="">
+    <!-- Librería AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Boostrap CDN - Online-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!--Librería para animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
 
 <body>
   <!--Inicio del header-->
-  <header class="animate__animated animate__bounce ">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light color_header">
-      <div class=" container-fluid color_header">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../img/logotit.jpg" class="logo_header" alt="Logotipo del suplementos" data-aos="zoom-in-down">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html"> <i class="icon ion-ios-home mr-1"></i> Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../paginas/suplements.html"> <i class="icon ion-md-flask"></i> Suplements</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../paginas/clothes.html"> <i class="icon ion-md-shirt"></i> Clothes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../paginas/routines.html"> <i class="icon ion-md-fitness"></i> Routines</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contacto</a>
-            </li>
-          </ul>
+  <header class="animate__animated animate__bounce">
+    <div class="menu-bar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light color_header">
+        <div class="container-fluid color_header">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/logotitulo.png" class="logo_header animate__heartBeat" alt="Logotipo del suplementos" data-aos="zoom-in-down">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"> <i class="icon ion-ios-home mr-1"></i> Home</a>
+              </li>
+              <!--li class="nav-item">
+                <a class="nav-link" href="paginas/suplements.html"> <i class="icon ion-md-flask"></i> Suplements</a>
+              </li-->
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="icon ion-md-flask"></i> Suplements
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="../paginas/suplementsP.html">Protein</a></li>
+                  <li><a class="dropdown-item" href="../paginas/suplementsC.html">Creatine</a></li>
+                  <!--li><a class="dropdown-item" href="../paginas/suplements.html">Snacks</a></li>
+                  <li><a class="dropdown-item" href="../paginas/suplements.html">Others</a></li-->
+                </ul>
+              </li>
+              <!--li class="nav-item">
+                <a class="nav-link" href="paginas/clothes.html"> <i class="icon ion-md-shirt"></i> Clothes</a>
+              </li-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="icon ion-md-shirt"></i> Clothes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="../paginas/clothes.html">Dama</a></li>
+                  <li><a class="dropdown-item" href="../paginas/clothes.html">Caballero</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../paginas/routines.html"> <i class="icon ion-md-fitness"></i> Routines</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
+  <!--Fin del header-->
 
   <main>
     <div class="container-fluid h1_index text-center">
-      <h1 data-aos="zoom-out-down" class="container-fluid" id="titulo"> Pulsa en Suplementos del Menú  </h1>
+      <h1 class="container-fluid" id="titulo"> Rutinas</h1>
     </div>
 
     <div class="text-center">
-      <h1 id="titulo">ODI'S SUPLEMENTS</h1>
-      <p id="slogan">There will be a nice image bellow</p>
-      <img class="responsive-img" src="../img/suplementos.jpg" alt="" width="50%">
+      <img class="responsive-img" src="../img/lidia1.jpg" alt="" width="90%">
     </div>
-    <div>
-      <h2 class="center">Available Products</h2>
-      <ul class="collection" id="listadoProductos">
-        <li class="collection-item">Producto 1</li>
-        <li class="collection-item">Producto 2</li>
-        <li class="collection-item">Producto 3</li>
-        <li class="collection-item">Producto 4</li>
-        <li class="collection-item">Producto 5</li>
-        <li class="collection-item">Producto 6</li>
-        <li class="collection-item">Producto 7</li>
-        <li class="collection-item">Producto 8</li>
-        <li class="collection-item">Producto 9</li>
-        <li class="collection-item">Producto 10</li>
-      </ul>
-    </div>
+
+    <br>
 
     <!-- <div class="d-flex">
         <div id="sidebar-container" class="bg-primary">
@@ -96,17 +121,29 @@
   <footer class="text-center text-white" style="background-color: #f1f1f1;">
     <!-- Copyright -->
     <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      <img src="../img/escudo.png" alt="" class="imagen_footer"> <br> <br>
-      Ingeniero Oduad Aragón Cruz<br>
-      Universidad Nacional Autónoma de México <br>
-      Cédula profesional 11500020|© 2022 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="../img/logofooter.png" alt="" class="imagen_footer">
+          </div>
+          <div class="col">
+            Ing. Oduad Aragón Cruz<br>
+            Universidad Nacional Autónoma de México
+            Cédula profesional 11500020|© 2022 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            <br><br>
+          </div>
+          <div class="col">
+            <img src="../img/unam.png" alt="" class="imagen_footer"><br>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Copyright -->
   </footer>
 
   <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS 
   <script src="../js/entrega.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -116,12 +153,18 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script -->
 
-  <!--Parte de JavaScrip -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+    <!--Parte de JavaScrip -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <!-- Parte de JavaScrip de AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicializador de AOS -->
+    <script> AOS.init();</script>
 
 </body>
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <!-- Required meta tags -->
@@ -14,7 +14,7 @@
   <!-- SEO Keywords-->
   <meta name="keywords" content="">
   <!--SEO Título-->
-  <title>Clothes</title>
+  <title>Suplements</title>
   <!--SEO Keywords-->
   <meta name="description" content="">
   <!-- Librería AOS -->
@@ -24,7 +24,6 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Estilos propios-->
   <link rel="stylesheet" href="../css/styles.css">
-  <!--Sin sass: href="estilos.css"-->
   <!--Librería para animaciones-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -37,7 +36,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light color_header">
         <div class="container-fluid color_header">
           <a class="navbar-brand" href="../index.html">
-            <img src="../img/logotitulo.png" class="logo_header animate__heartBeat" alt="Logotipo del suplementos"
+            <img src="../img/logotitulo.png" class="logo_header animate__heartBeat" alt="Logotipo de suplementos"
               data-aos="zoom-in-down">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -67,11 +66,9 @@
                   <li><a class="dropdown-item" href="../paginas/suplements.html">Others</a></li-->
                 </ul>
               </li>
-
               <!--li class="nav-item">
                 <a class="nav-link" href="paginas/clothes.html"> <i class="icon ion-md-shirt"></i> Clothes</a>
               </li-->
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -96,18 +93,18 @@
   </header>
   <!--Fin del header-->
 
+  <!--Inicio del main-->
   <main>
-    <!--div class="h1_index text-center">
-      <h1 data-aos="zoom-out-down" class="container-fluid" id="titulo"> Pulsa en Suplementos del Menú </h1>
-    </div No permite usar bien ese data-aos="zoom-out-down -->
-
-    <div class="text-center">
-      <h1 id="titulo">ODI'S SUPLEMENTS</h1>
-      <p id="slogan">There will be a nice image bellow</p>
-      <img class="responsive-img" src="../img/ropa.jpg" alt="" width="50%">
+    <div class="text-center"> <br>
+      <h1 id="titulo">ODI'S SUPLEMENTS</h1><br>
+      <img class="img-fluid" src="../img/suplementos.jpg" alt="" width="50%">
     </div>
     <div>
-      <h2 class="center">Available Products</h2>
+      <br><br>
+      <h2 class="text-center">Available Products</h2> <br><br>
+      <div class="text-center">
+        <button class="btn btn-success" id="bot">Ver lista</button><br><br>
+      </div>
       <ul class="collection" id="listadoProductos">
         <li class="collection-item">Producto 1</li>
         <li class="collection-item">Producto 2</li>
@@ -117,25 +114,90 @@
         <li class="collection-item">Producto 6</li>
         <li class="collection-item">Producto 7</li>
         <li class="collection-item">Producto 8</li>
-        <li class="collection-item">Producto 9</li>
-        <li class="collection-item">Producto 10</li>
       </ul>
     </div>
 
-    <!-- <div class="d-flex">
-        <div id="sidebar-container" class="bg-primary">
-            <div class="logo">
-                <h4 class="text-light font-weight-bold" id="titulo">Odi's Suplements</h4>
-            </div>
-            <div class="menu">
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-home mr-1"></i> Home</a>
-                <a href="#"class="d-block text-light p-3 mr-9 lead"> <i class="icon ion-logo-javascript"></i>  Mass winners</a>
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-md-school"></i> Proteins</a>
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-flask"></i> Snacks</a>
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-rocket"></i> Clothes</a>
-            </div>
-        </div>
-    </div> -->
+    <div class="color-carrito carrito text-center">
+      <ul class="collection" id="listadoCarrito">
+
+      </ul>
+      <a href=""></a>
+    </div>
+
+    <div>
+      <article class="container">
+        <h2>Tabla</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Descuento</th>
+              <th scope="col">Precio Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--tr>
+              <td>1234</td>
+              <td>Descripción de mi producto</td>
+              <td>1000</td>
+              <td>1210</td>
+            </tr-->
+          </tbody>
+        </table>
+      </article>
+    </div>
+
+    <div class="text-center">
+      <br>
+      <button class="btn btn-success" id="boton">Ver galería</button>
+      <br><br>
+    </div>
+
+    <div class="text-center" class="container">
+      <h4>Llena el formulario para dar de alta un producto</h4>
+      <div>
+        <table id="factura" class="text-center"></table>
+        <!--form class="formulario"-->
+        <span class="text-nomb">
+          Nombre del producto:
+        </span><br>
+        <label class="lbl-nombre">
+        </label>
+        <input type="text" id="producto" required>
+        <span class="text-pro"> <br>
+          Marca:
+        </span><br>
+        <label class="lbl-pro">
+        </label>
+        <input type="text" id="marca" required>
+        <span class="text-cant"><br>
+          Cantidad:
+        </span><br>
+        <label class="lbl-cant">
+        </label>
+        <input type="text" id="cantidad" required>
+        <span class="text-pre"> <br>
+          Precio:
+        </span><br>
+        <label class="lbl-pre">
+        </label>
+        <input type="text" id="precio" required><br><br>
+        <!--a class="btn-neon" id="botonx">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <span id="span4"></span>
+            Agregar
+          </a-->
+        <!--/form-->
+        <div>
+          <button class="btn btn-success" id="boton1">Agregar</button>
+          <button class="btn btn-primary" id="boton2">Eliminar</button>
+        </div><br>
+      </div>
+      <br>
 
   </main>
 
@@ -145,7 +207,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <img src="../img/logofooter.png" alt="" class="imagen_footer responsive-img" width="100%">
+            <img src="../img/logofooter.png" alt="" class="imagen_footer">
           </div>
           <div class="col">
             Ing. Oduad Aragón Cruz<br>
@@ -155,13 +217,17 @@
             <br><br>
           </div>
           <div class="col">
-            <img src="../img/unam.png" alt="" class="imagen_footer responsive-img" width="100%"><br>
+            <img src="../img/unam.png" alt="" class="imagen_footer"><br>
           </div>
         </div>
       </div>
     </div>
     <!-- Copyright -->
   </footer>
+
+  <!--Parte de JavaScrip -->
+  <script src="../js/entrega.js"></script>
+  <script src="../js/entregaSups1.js"></script>
 
   <!--Parte de JavaScrip -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

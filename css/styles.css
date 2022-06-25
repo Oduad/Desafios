@@ -64,7 +64,8 @@ header {
     }
 }
 
-.div-video, .div1{
+.div-video,
+.div1 {
     padding: 50px;
 }
 
@@ -214,6 +215,156 @@ a:hover {
     transition-delay: 0.125s;
 }
 
+/*Contacto DESKTOP*/
+
+#titulo {
+    font-size: 40px;
+}
+
+.div-contact {
+    padding: 50px;
+}
+
+.circleL {
+    padding: 50px;
+    margin-right: 80px;
+    width: 10px;
+    height: 10px;
+    background: cornflowerblue;
+    border-radius: 60%;
+
+    animation-name: cambiarColorL;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambiarColorL {
+    0% {
+        background-color: coral;
+        transform: translateY(-150px) scale(0.4);
+    }
+
+    10% {
+        background-color: violet;
+        transform: translateY(-80px) scale(0.6);
+    }
+
+    20% {
+        background-color: greenyellow;
+        transform: translateY(-10px) scale(0.8);
+    }
+
+    30% {
+        background-color: cornflowerblue;
+        transform: translateY(60px) scale(1);
+    }
+
+    40% {
+        background-color: lavender;
+        transform: translateY(120px) scale(1.2);
+    }
+
+    50% {
+        background-color: tomato;
+        transform: translateY(160px) scale(1.4);
+    }
+
+    60% {
+        background-color: hotpink;
+        transform: translateY(100px) scale(1.2);
+    }
+
+    70% {
+        background-color: lightgreen;
+        transform: translateY(40px) scale(1);
+    }
+
+    80% {
+        background-color: lightgoldenrodyellow;
+        transform: translateY(-20px) scale(0.8);
+    }
+
+    90% {
+        background-color: royalblue;
+        transform: translateY(-80px) scale(0.6);
+    }
+
+    100% {
+        background-color: chartreuse;
+        transform: translateY(-140px) scale(0.4);
+    }
+}
+
+.circleR {
+    padding: 50px;
+    margin-left: 80px;
+    width: 10px;
+    height: 10px;
+    background: cornflowerblue;
+    border-radius: 60%;
+
+    animation-name: cambiarColorR;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambiarColorR {
+    0% {
+        background-color: coral;
+        transform: translateY(-150px) scale(0.4);
+    }
+
+    10% {
+        background-color: violet;
+        transform: translateY(-80px) scale(0.6);
+    }
+
+    20% {
+        background-color: greenyellow;
+        transform: translateY(-10px) scale(0.8);
+    }
+
+    30% {
+        background-color: cornflowerblue;
+        transform: translateY(60px) scale(1);
+    }
+
+    40% {
+        background-color: lavender;
+        transform: translateY(120px) scale(1.2);
+    }
+
+    50% {
+        background-color: tomato;
+        transform: translateY(160px) scale(1.4);
+    }
+
+    60% {
+        background-color: hotpink;
+        transform: translateY(100px) scale(1.2);
+    }
+
+    70% {
+        background-color: lightgreen;
+        transform: translateY(40px) scale(1);
+    }
+
+    80% {
+        background-color: lightgoldenrodyellow;
+        transform: translateY(-20px) scale(0.8);
+    }
+
+    90% {
+        background-color: royalblue;
+        transform: translateY(-80px) scale(0.6);
+    }
+
+    100% {
+        background-color: chartreuse;
+        transform: translateY(-140px) scale(0.4);
+    }
+}
+
 /*Elementos del footer en DESKTOP*/
 .col-footer {
     font-size: 15px;
@@ -225,15 +376,174 @@ a:hover {
 
 /*TABLET*/
 @media (min-width: 577px) and (max-width: 768px) {
+
+    #titulo {
+        font-size: 30px;
+    }
+
     .col-footer {
         font-size: 13px;
     }
-}
 
+    .circleR {
+        padding: 30px;
+        margin-left: 80px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .circleL {
+        padding: 30px;
+        margin-right: 80px;
+        width: 10px;
+        height: 10px;
+    }
+}
 
 /*CELPHONE*/
 @media (max-width: 576px) {
+
+    #titulo {
+        font-size: 25px;
+    }
+
     .col-footer {
         font-size: 11px;
     }
+
+    iframe {
+        max-width: 150px;
+        max-height: 100px;
+    }
+
+    .circleR {
+        padding: 10px;
+        margin-left: 260px;
+        width: 30px;
+        height: 30px;
+        animation-name: cambiarColorR;
+    }
+
+    .circleL {
+        padding: 10px;
+        margin-right: 260px;
+        width: 30px;
+        height: 30px;
+        animation-name: cambiarColorL;
+    }
+
+    @keyframes cambiarColorL {
+        0% {
+            background-color: coral;
+            transform: translateY(18px) scale(0.4);
+        }
+
+        10% {
+            background-color: violet;
+            transform: translateY(58px) scale(0.6);
+        }
+
+        20% {
+            background-color: greenyellow;
+            transform: translateY(98px) scale(0.8);
+        }
+
+        30% {
+            background-color: cornflowerblue;
+            transform: translateY(138px) scale(1);
+        }
+
+        40% {
+            background-color: lavender;
+            transform: translateY(178px) scale(1.2);
+        }
+
+        50% {
+            background-color: tomato;
+            transform: translateY(218px) scale(1.4);
+        }
+
+        60% {
+            background-color: hotpink;
+            transform: translateY(178px) scale(1.2);
+        }
+
+        70% {
+            background-color: lightgreen;
+            transform: translateY(138px) scale(1);
+        }
+
+        80% {
+            background-color: lightgoldenrodyellow;
+            transform: translateY(98px) scale(0.8);
+        }
+
+        90% {
+            background-color: royalblue;
+            transform: translateY(58px) scale(0.6);
+        }
+
+        100% {
+            background-color: chartreuse;
+            transform: translateY(18px) scale(0.4);
+        }
+    }
+
+    @keyframes cambiarColorR {
+        0% {
+            background-color: coral;
+            transform: translateY(-200px) scale(0.4);
+        }
+
+        10% {
+            background-color: violet;
+            transform: translateY(-160px) scale(0.6);
+        }
+
+        20% {
+            background-color: greenyellow;
+            transform: translateY(-120px) scale(0.8);
+        }
+
+        30% {
+            background-color: cornflowerblue;
+            transform: translateY(-80px) scale(1);
+        }
+
+        40% {
+            background-color: lavender;
+            transform: translateY(-40px) scale(1.2);
+        }
+
+        50% {
+            background-color: tomato;
+            transform: translateY(00px) scale(1.4);
+        }
+
+        60% {
+            background-color: hotpink;
+            transform: translateY(-40px) scale(1.2);
+        }
+
+        70% {
+            background-color: lightgreen;
+            transform: translateY(-80px) scale(1);
+        }
+
+        80% {
+            background-color: lightgoldenrodyellow;
+            transform: translateY(-120px) scale(0.8);
+        }
+
+        90% {
+            background-color: royalblue;
+            transform: translateY(-160px) scale(0.6);
+        }
+
+        100% {
+            background-color: chartreuse;
+            transform: translateY(-200px) scale(0.4);
+        }
+    }
+
 }

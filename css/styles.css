@@ -64,6 +64,10 @@ header {
     }
 }
 
+.div-video, .div1{
+    padding: 50px;
+}
+
 .form {
     width: 100%;
     height: 50px;
@@ -212,17 +216,17 @@ a:hover {
 
 /*Elementos del footer en DESKTOP*/
 .col-footer {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .imagen_footer {
-    max-width: 90px;
+    max-width: 120px;
 }
 
 /*TABLET*/
 @media (min-width: 577px) and (max-width: 768px) {
     .col-footer {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
@@ -230,6 +234,6 @@ a:hover {
 /*CELPHONE*/
 @media (max-width: 576px) {
     .col-footer {
-        font-size: 12px;
+        font-size: 11px;
     }
 }

@@ -85,6 +85,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contact</a>
               </li>
+              <li class="nav-item">
+                <button class="nav-link text-body" id="open" href="#">Carrito <ion-icon name="cart"></ion-icon><span
+                    id="contador-carrito">0</span></button>
+              </li>
             </ul>
           </div>
         </div>
@@ -94,7 +98,10 @@
   <!--Fin del header-->
 
   <!--Inicio del main-->
-  <main>
+  <main class="creatinas-contenedor">
+
+
+
     <div class="text-center"> <br>
       <h1 id="titulo">ODI'S SUPLEMENTS</h1><br>
       <img class="img-fluid" src="../img/suplementos.jpg" alt="" width="50%">
@@ -163,25 +170,25 @@
         <span class="text-nomb">
           Nombre del producto:
         </span><br>
-        <label class="lbl-nombre">
+        <label class="lbl-producto">
         </label>
-        <input type="text" id="producto" required>
+        <input type="text" id="nombre" required>
         <span class="text-pro"> <br>
           Marca:
         </span><br>
-        <label class="lbl-pro">
+        <label class="lbl-marca">
         </label>
         <input type="text" id="marca" required>
         <span class="text-cant"><br>
           Cantidad:
         </span><br>
-        <label class="lbl-cant">
+        <label class="lbl-cantidad">
         </label>
         <input type="text" id="cantidad" required>
         <span class="text-pre"> <br>
           Precio:
         </span><br>
-        <label class="lbl-pre">
+        <label class="lbl-precio">
         </label>
         <input type="text" id="precio" required><br><br>
         <!--a class="btn-neon" id="botonx">
@@ -227,14 +234,19 @@
   </footer>
   <!--Fin del footer-->
 
-  <!--Parte de JavaScrip -->
+  <!--Parte de JavaScrip>
+  <script src="../js/creatinas.js" type="module"></script>
+  <script src="../js/creatinasDisponibles.js" type="module"></script>
+  <script src="../js/modalCreatinas.js" type="module"></script-->
   <script src="../js/entrega.js"></script>
-  <script src="../js/entregaSups1.js"></script>
 
   <!--Parte de JavaScrip -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <!-- Parte de JavaScrip de AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

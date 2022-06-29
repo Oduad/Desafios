@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    ;
+    overflow-y:visible;
+
     /*overflow-y:auto;
     overflow-x: auto;*/
 }
-
 
 /*:root {
     /*--primary: #111B54;
@@ -14,7 +14,6 @@
     overflow-y: auto;
     overflow-x: auto;
 }*/
-
 
 /*PC*/
 .menu-bar .navbar {
@@ -64,6 +63,36 @@ header {
     }
 }
 
+/*Index DESKTOP*/
+
+/*.main_index{
+    background: url(../img/maude.jpg) no-repeat center center;
+}*/
+
+h1 {
+    font-weight: bold;
+    animation: tituloHome 3s;
+  }
+  
+  @keyframes tituloHome {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    30% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+    90% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
 .div-video,
 .div1 {
     padding: 50px;
@@ -94,7 +123,27 @@ body {
 
 .imagen_index {
     text-align: center;
-}
+    animation: imagenIndex 3s;
+  }
+  
+  @keyframes imagenIndex {
+    0% {
+      transform: translateY(500px);
+      opacity: 0;
+    }
+    30% {
+      transform: translateY(0);
+      opacity: 0.3;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 0.6;
+    }
+    90% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 
 a:hover {
     text-decoration: none;
@@ -135,90 +184,74 @@ a:hover {
     outline-style: auto;
 }*/
 
-.btn-neon {
-    position: relative;
+
+/*Suplemento/Proteínas contenedor DESKTOP*/
+#proteinas-contenedor{
+    display: grid;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly ;
+    flex-wrap: wrap;
+}
+
+.card .card-image .card-title{
     display: inline-block;
-    padding: 8px 12px;
-    color: black;
-    letter-spacing: 4px;
-    font-size: 12px;
-    font-weight: 200;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.2s;
+    color: dodgerblue;
+    position: unset;
 }
 
-.btn-neon:hover {
-    background-color: #a945c7;
-    box-shadow: 0 0 10px #a945c7 0 0 40px #a945c7 0 0 80px #a945c7;
-    transition-delay: 1s;
-    color: black;
+.card{
+    margin: 18px;
 }
 
-.btn-neon span {
-    position: absolute;
-    display: block;
-}
-
-#span1 {
-    top: 0;
-    left: -100%;
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: transparent;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #a945c7);
+    height: 100px;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    z-index: 100;
 }
 
-.btn-neon:hover #span1 {
-    left: 100%;
-    transition: 0.25s;
+.modal-active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
 }
 
-#span3 {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #a945c7);
+.modal-carrito{
+    width: 30rem;
+    height: 20rem;
+    background-color: whitesmoke;
+    overflow-y: auto;
 }
 
-.btn-neon:hover #span3 {
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
+.productoEnCarrito{
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-#span2 {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #a945c7);
-}
-
-.btn-neon:hover #span2 {
-    top: 100%;
-    transition: 0.25s;
-    transition-delay: 0.125s;
-}
-
-#span4 {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #a945c7);
-}
-
-.btn-neon:hover #span4 {
-    bottom: 100%;
-    transition: 0.25s;
-    transition-delay: 0.125s;
+#creatinas-contenedor{
+    display: grid;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 /*Contacto DESKTOP*/
-
 #titulo {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .div-contact {
@@ -307,6 +340,63 @@ a:hover {
     animation-duration: 8s;
     animation-iteration-count: infinite;
 }
+
+/*@keyframes cambiarColorR {
+    0% {
+        background-color: coral;
+        transform: translateY(-150px) scale(0.4);
+    }
+
+    10% {
+        background-color: violet;
+        transform: translateY(-80px) scale(0.6);
+    }
+
+    20% {
+        background-color: greenyellow;
+        transform: translateY(-10px) scale(0.8);
+    }
+
+    30% {
+        background-color: cornflowerblue;
+        transform: translateY(60px) scale(1);
+    }
+
+    40% {
+        background-color: lavender;
+        transform: translateY(120px) scale(1.2);
+    }
+
+    50% {
+        background-color: tomato;
+        transform: translateY(160px) scale(1.4);
+    }
+
+    60% {
+        background-color: hotpink;
+        transform: translateY(100px) scale(1.2);
+    }
+
+    70% {
+        background-color: lightgreen;
+        transform: translateY(40px) scale(1);
+    }
+
+    80% {
+        background-color: lightgoldenrodyellow;
+        transform: translateY(-20px) scale(0.8);
+    }
+
+    90% {
+        background-color: royalblue;
+        transform: translateY(-80px) scale(0.6);
+    }
+
+    100% {
+        background-color: chartreuse;
+        transform: translateY(-140px) scale(0.4);
+    }
+}*/
 
 @keyframes cambiarColorR {
     0% {

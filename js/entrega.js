@@ -99,12 +99,11 @@ listarProductos();
 document.getElementById("boton1").onclick = agregarProducto;
 document.getElementById("boton2").onclick = eliminarProducto;
 
-
 /*Las 3 funciones son para agregar elemento a la tabla. Los elementos son ingresados por el formulario*/
 
 /*Función para agregar un producto*/
 function agregarProducto() {
-    let producto = document.getElementById("producto").value;
+    let producto = document.getElementById("nombre").value;
     let marca = document.getElementById("marca").value;
     let cantidad = document.getElementById("cantidad").value;
     let precio = document.getElementById("precio").value;
@@ -114,7 +113,7 @@ function agregarProducto() {
 
 /*Función para eliminar un producto*/
 function eliminarProducto() {
-    let excluido = document.getElementById("producto").value;
+    let excluido = document.getElementById("nombre").value;
     canasta = canasta.filter((elemento) =>
         elemento.nombre != excluido
     )
@@ -129,6 +128,7 @@ function hacerTabla() {
     for (let i = 0; i < canasta.length; i++) {
         tabla += `<tr><td>${canasta[i].id}</td><td>${canasta[i].nombre}</td><td>${canasta[i].marca}</td><td>${canasta[i].cantidad}</td><td>${canasta[i].precio}</td></tr>`;
     }
+    guardarDatos()
     document.getElementById("factura").innerHTML = tabla;
 }
 
@@ -136,3 +136,26 @@ function hacerTabla() {
 function generador() {
     return (Math.random() * 10).toFixed(0);
 }
+
+function guardarDatos() {
+    const datosPro = {
+        nombre: nombre.value,
+        marca: marca.value,
+        cantidad: cantidad.value,
+        precio: precio.value
+    }
+    let str = JSON.stringify(datosPro)
+    localStorage.setItem("producto", str)
+}
+
+function recuperarDatos () {
+    if(localStorage.getItem("producto")){
+        const datosPro = JSON.parse(localStorage.getItem("producto"))
+        nombre.value = datosPro.nombre
+        marca.value = datosPro.marca
+        cantidad.value = datosPro.cantidad
+        precio.value = datosPro.precio
+    }
+}
+
+recuperarDatos()

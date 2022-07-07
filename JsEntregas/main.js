@@ -17,7 +17,7 @@ const imagen = document.querySelector("img")
 }*/
 
 imagen.addEventListener('click', () => {
-    alert("Detectando el evento click")
+    swa(`Detectando el evento click.`, "DodgerBlue", 2000, 'info')
 })
 
 /*Uso de la desestructuración*/
@@ -28,6 +28,20 @@ console.log("Valor de c: " + c + ". Valor de d: " + d)
 /*USO DE SPREAD*/
 console.log("Tenemos disponibles los siguientes productos:")
 console.log(...productos)
+
+const swa = (mensaje, bgColor, tiempo, icono, color) => {
+    Swal.fire({
+        icon: icono || '',
+        title: mensaje,
+        position: 'top-end',
+        showConfirmButton: true,
+        toast: true,
+        timer: tiempo || 3000,
+        timerProgressBar: true,
+        background: bgColor || 'white',
+        color: color || '#ffffff'
+    })
+}
 
 cargarProductos = () => {
     //debugger
@@ -46,6 +60,7 @@ cargarProductos = () => {
 }
 
 cargarProductos()
+swa(`Se han cargado todos los productos en el carrito.`, "DodgerBlue", 2000, 'info')
 
 agregarAlCarrito = (prod) => {
     carrito.push(prod) //Debajo de esto debería guardar el carrito
@@ -72,9 +87,11 @@ removerDelCarrito = (prod) => {
     }else{
         carrito.splice(item, 1)
     }*/
-    console.warn(`${prod} ha sido eliminado del carrito`)
+    //console.warn(`${prod} ha sido eliminado del carrito`)
+    swa(`${prod} ha sido eliminado del carrito`, "DodgerBlue", 2000, 'success')
     /*Uso del operador ternario*/
-    carrito.length > 0 ? console.log(`Te quedan ${carrito.length} productos en el carrito.`) : console.log('El carrito está vacío.')
+    carrito.length > 0 ? swa(`Te quedan ${carrito.length} productos en el carrito.`, "DodgerBlue", 2000, 'info')  : 
+    swa(`El carrito está vacío.`, "DodgerBlue", 2000, 'info')
 }
 
 function guardoCarrito1() {
@@ -83,7 +100,7 @@ function guardoCarrito1() {
     }*/
 
     //Optimización con operador ternario y AND
-    carrito.length > 0?(localStorage.setItem("carrito", JSON.stringify(carrito))):(localStorage.removeItem("carrito"))
+    carrito.length > 0 ? (localStorage.setItem("carrito", JSON.stringify(carrito))) : (localStorage.removeItem("carrito"))
 
 }
 
@@ -97,3 +114,7 @@ function recuperoCarrito() {
 }
 
 recuperoCarrito()
+swa(`El carrito ha sido recuperado.`, "DodgerBlue", 2000, 'info')
+
+//¿Cuáles son las variables nativas?
+

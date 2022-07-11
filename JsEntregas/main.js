@@ -90,8 +90,8 @@ removerDelCarrito = (prod) => {
     //console.warn(`${prod} ha sido eliminado del carrito`)
     swa(`${prod} ha sido eliminado del carrito`, "DodgerBlue", 2000, 'success')
     /*Uso del operador ternario*/
-    carrito.length > 0 ? swa(`Te quedan ${carrito.length} productos en el carrito.`, "DodgerBlue", 2000, 'info')  : 
-    swa(`El carrito está vacío.`, "DodgerBlue", 2000, 'info')
+    carrito.length > 0 ? swa(`Te quedan ${carrito.length} productos en el carrito.`, "DodgerBlue", 2000, 'info') :
+        swa(`El carrito está vacío.`, "DodgerBlue", 2000, 'info')
 }
 
 function guardoCarrito1() {
@@ -117,4 +117,70 @@ recuperoCarrito()
 swa(`El carrito ha sido recuperado.`, "DodgerBlue", 2000, 'info')
 
 //¿Cuáles son las variables nativas?
+
+const preloader = () => {
+    return `<div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-red-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>`
+}
+
+const contenidoDOM = document.querySelector("#contenido")
+const cargandoDOM = document.querySelector("#cargando")
+
+const URL = `../JsEntregas/fetch.json`
+
+const retornoCardContenido = (contenido) => {
+
+    const { poster, marca, pais } = contenido
+    return `<div class="col s12 m6 l3">
+    <div class="card  z-depth-2">
+        <div class="card-image">
+            <img loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
+        </div>
+        <div class="card-content black">
+            <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
+            <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
+        </div>
+    </div>
+</div>`
+}
+
+const retornoError = () => {
+    return `<div class="center white-text">
+    <br><br><br><br>
+    <h4>El contenido no está disponible. Intente nuevamente en unos minutos.</h4>
+    <br><br>
+    <i class="large material-icons">sentiment_very_dissatisfied</i>
+    <br><br>
+</div>`
+}
+
+//Fetch le pide información al servidor y si todo está bien, el servidor manda 
+//Response que se queda el fetch en formato JSON
+//Todo JSON que devuelve un servidor es en formato String
+
+const obtenerContenido = (URL) => {
+    let cardsAmostrar = ""
+    fetch(URL)
+        .then((response) => response.json())
+        .then((data) => {
+            //console.table(data)
+            for (contenido of data) {
+                cardsAmostrar += retornoCardContenido(contenido)
+            }
+            contenidoDOM.innerHTML=cardsAmostrar
+        })
+        .catch((error)=> contenidoDOM.innerHTML= retornoError() )
+        .finally(()=>cargandoDOM.innerHTML="")
+}
+
+
 

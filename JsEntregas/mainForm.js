@@ -56,22 +56,30 @@ const faltanDatos = () => {
 }
 
 function guardarDatos() {
-    const datosDeUsr = {
-        nombre: inputNombre.value,
-        telefono: inputTelefono.value,
-        email: inputEmail.value
-    }
 
-    //Líneas agregada de desestructuración. Del objeto datosDeUsr solo se imprime el nombre
-    const { nombre, telefono } = datosDeUsr
-    //console.log("Gracias por su compra, "+nombre)
-    toastSA(`Gracias por su compra, ` + nombre, "#66FF99", 2000, 'success', "black")
-    toastSA(`La hora es: ` + dt.toString(), "#66FF99", 2000, 'success', "black", 'center')
-    //console.log("Probablemente nos comuniquemos al número "+telefono)
-    //toastSA("Complete todos los datos","DodgerBlue",2000,'warning')
+    const animacion = document.querySelector("#animacion")
+    animacion.innerHTML = preloader()
 
-    let str = JSON.stringify(datosDeUsr)
-    localStorage.setItem("datosDeUsr", str)
+    setTimeout(() => {
+        const datosDeUsr = {
+            nombre: inputNombre.value,
+            telefono: inputTelefono.value,
+            email: inputEmail.value
+        }
+
+        //Líneas agregada de desestructuración. Del objeto datosDeUsr solo se imprime el nombre
+        const { nombre, telefono } = datosDeUsr
+        //console.log("Gracias por su compra, "+nombre)
+        toastSA(`Gracias por su compra, ` + nombre, "#66FF99", 2000, 'success', "black")
+        //toastSA(`La hora es: ` + dt.toString(), "#66FF99", 2000, 'success', "black", 'center')
+        //console.log("Probablemente nos comuniquemos al número "+telefono)
+        //toastSA("Complete todos los datos","DodgerBlue",2000,'warning')
+
+        let str = JSON.stringify(datosDeUsr)
+        localStorage.setItem("datosDeUsr", str)
+        animacion.innerHTML = ""
+    }, 4000)
+
 }
 
 function recuperarDatosDeUsr() {
@@ -103,12 +111,26 @@ const toastSA = (mensaje, bgColor, tiempo, icono, color, position) => {
     })
 }
 
-const dt = DateTime.fromObject(
+/*const dt = DateTime.fromObject(
     { day: 22, hour: 12, month: 2 },
     { zone: 'America/Buenos_Aires', numberingSystem: 'Beng' }
-)
+)*/
 
-  
+const preloader = () => {
+    return `<div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-yellow-only">
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>`
+}
+
+
 
 
 //un en medio hay 2 team leader, hay un mockup en paralelo con JSON

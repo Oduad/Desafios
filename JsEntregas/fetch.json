@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "nombre": "Proteína 1",
+        "poster": "/img/carnivor.jpg",
+        "precio": "980",
+        "cantidad": "5 lb",
+        "marca": "Marca 1",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 2,
+        "nombre": "Proteína 2",
+        "poster": "/img/goldst.jpg",
+        "precio": "1100",
+        "cantidad": "4 lb",
+        "marca": "Marca 2",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 3,
+        "nombre": "Proteína 3",
+        "poster": "/img/prowinner.jpg",
+        "precio": "1250",
+        "cantidad": "5.2 lb",
+        "marca": "Marca 3",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 4,
+        "nombre": "Proteína 4",
+        "poster": "/img/hexapro.jpg",
+        "precio": "1650",
+        "cantidad": "4 lb",
+        "marca": "Marca 4",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 5,
+        "nombre": "Proteína 5",
+        "poster": "/img/iso.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 5",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 6,
+        "nombre": "Proteína 6",
+        "poster": "/img/isopure.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 6",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 7,
+        "nombre": "Creatina 1",
+        "poster": "/img/creatina1.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 7",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 8,
+        "nombre": "Creatina 2",
+        "poster": "/img/creatina2.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 8",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 9,
+        "nombre": "Creatina 3",
+        "poster": "/img/creatina3.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 9",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 10,
+        "nombre": "Creatina 4",
+        "poster": "/img/creatina4.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 10",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    }
+]

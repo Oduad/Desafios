@@ -1,6 +1,4 @@
 const productos = ['Proteína 1', 'Proteína 2', 'Proteína 3', 'Snacks 1', 'Snacks 2 ', 'Snacks 3']
-/*const productos = ['Arandanos', 'Grosella', 'Papaya', 'Manzana', 'Pera', 'Frutillas', 'Anana', 'Durazno', 'Ciruelas', 'Arándano', 'Papaya', 'Mango']
-const productos = [{Nombre: 'Arandanos'}, {Nombre: 'Grosella'},{Nombre: 'Papaya'}]*/
 const carrito = []
 
 const titulo = document.getElementById("titulo")
@@ -149,6 +147,7 @@ const retornoCardContenido = (contenido) => {
             <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
             <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
         </div>
+        <br>
     </div>
 </div>`
 }

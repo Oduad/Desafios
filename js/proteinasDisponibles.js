@@ -7,7 +7,7 @@ const proteinasDisponibles = [
         id: contadorProductos++,
         nombre: "Gold Wh",
         precio: 1200,
-        img: '../img/goldStWhey.jpg'
+        img: '../img/goldst.jpg'
     },
     {
         id: contadorProductos++,
@@ -37,7 +37,7 @@ const proteinasDisponibles = [
         id: contadorProductos++,
         nombre: "Pro-winner",
         precio: 1100,
-        img: '../img/download.jpg'
+        img: '../img/prowinner.jpg'
     }
 ]
 

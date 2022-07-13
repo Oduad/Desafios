@@ -1,6 +1,20 @@
 import { proteinasDisponibles } from './proteinasDisponibles.js'
 import { carritoIndex } from './carritoIndexSup.js'
 
+const swa = (mensaje, bgColor, tiempo, icono, color) => {
+    Swal.fire({
+        icon: icono || '',
+        title: mensaje,
+        position: 'top-center',
+        showConfirmButton: true,
+        toast: true,
+        timer: tiempo || 3000,
+        timerProgressBar: true,
+        background: bgColor || 'white',
+        color: color || '#ffffff'
+    })
+}//Falta arreglar el Swal
+
 //Esto corresponde al archivo entregaSups1
 const mostrarProductos = (productosLlegados) => {
     const contenedorProductos = document.getElementById('proteinas-contenedor');
@@ -30,6 +44,8 @@ const mostrarProductos = (productosLlegados) => {
     })
 }
 
+mostrarProductos(proteinasDisponibles)
+
 /*Parte de Storage*/
 function guardarDatos(producto) {
     const datosProducto = {
@@ -41,28 +57,24 @@ function guardarDatos(producto) {
     localStorage.setItem("datosProduct", str)
 }
 
-mostrarProductos(proteinasDisponibles)
-
 const contenidoDOM = document.querySelector("#contenido");
 const cargandoDOM = document.querySelector("#cargando");
 const URL = `../js/todos.json`
 
 const retornoCardContenido = (contenido) => {
-
-    const { poster, marca, pais } = contenido
-    return `<div class="col s12 m6 l3">
-    <div class="card  z-depth-2">
-        <div class="card-image">
-            <img loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
-        </div>
-        <div class="card-content black">
+    const {nombre, poster, marca, pais, id } = contenido
+    return `
+    <div class="card" style="width: 12rem;">
+            <img class="responsive-img" width="100%" loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
+        <div class="card-body black">
+            <h5 class="card-title">${nombre}</h5>
             <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
             <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
+            <button class="btn btn-primary"${id}">Comprar</button>
         </div>
         <br>
-    </div>
-</div>`
-}
+    </div>`
+} //Tengo que averiguar el asunto de la línea 75
 
 const retornoError = () => {
     return `<div class="center white-text">
@@ -79,17 +91,28 @@ const retornoError = () => {
 //Todo JSON que devuelve un servidor es en formato String
 
 const obtenerContenido = (URL) => {
-    let cardsAmostrar = ""
+    //let cardsAmostrar = ""
+    const contenedorProductos = document.getElementById('proteinas-contenedor');
     fetch(URL)
         .then((response) => response.json())
         .then((data) => {
             //console.table(data)
-            for (contenido of data) {
-                cardsAmostrar += retornoCardContenido(contenido)
+            for (let contenido of data) {
+                if(contenido.categoria === "Proteína"){
+                //cardsAmostrar += retornoCardContenido(contenido)
+                const div = document.createElement('div');
+                div.classList.add('card');
+                div.innerHTML += retornoCardContenido(contenido)
             }
-            contenidoDOM.innerHTML=cardsAmostrar
+                swa(`Se han cargado los productos disponibles`, "DodgerBlue", 1000, 'success')
+            }
+            //contenidoDOM.innerHTML=cardsAmostrar
+            contenedorProductos.appendChild(div);
         })
-        .catch((error)=> contenidoDOM.innerHTML= retornoError() )
+
+        .catch((error)=> {
+            
+            contenidoDOM.innerHTML= retornoError() })
         .finally(()=>cargandoDOM.innerHTML="")
 }
 
@@ -98,6 +121,8 @@ document.addEventListener("DOMContentLoaded",()=>{
         obtenerContenido(URL)
     },2000)
 })
+
+
 
 //Dudas
 //1. ¿En las líneas 5 no sería mejor var? const porque siempre se pide

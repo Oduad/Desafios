@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nombre": "Proteína 1",
+        "nombre": "Carnivor",
         "poster": "/img/carnivor.jpg",
         "precio": "980",
         "cantidad": "5 lb",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "nombre": "Proteína 2",
+        "nombre": "Gold St",
         "poster": "/img/goldst.jpg",
         "precio": "1100",
         "cantidad": "4 lb",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "nombre": "Proteína 3",
+        "nombre": "Prowinner",
         "poster": "/img/prowinner.jpg",
         "precio": "1250",
         "cantidad": "5.2 lb",
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "nombre": "Proteína 5",
+        "nombre": "ISO100",
         "poster": "/img/iso.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
@@ -51,7 +51,7 @@
     },
     {
         "id": 6,
-        "nombre": "Proteína 6",
+        "nombre": "Isopure",
         "poster": "/img/isopure.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
@@ -97,6 +97,35 @@
         "cantidad": "5 lb",
         "marca": "Marca 10",
         "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 11,
+        "nombre": "Pro Whey",
+        "poster": "/img/prote9.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 10",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },
+    {
+        "id": 12,
+        "nombre": "Performance",
+        "poster": "/img/prote10.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 10",
+        "categoria": "Proteína",
+        "pais": "EUA"
+    },{
+        "id": 13,
+        "nombre": "Master",
+        "poster": "/img/prote11.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 10",
+        "categoria": "Proteína",
         "pais": "EUA"
     }
 ]

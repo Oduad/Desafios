@@ -201,7 +201,11 @@ a:hover {
 }
 
 .card{
-    margin: 18px;
+    margin: 30px;
+}
+
+.responsive-img {
+    text-align: center;
 }
 
 .modal-container{

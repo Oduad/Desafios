@@ -61,7 +61,7 @@ const contenidoDOM = document.querySelector("#contenido");
 const cargandoDOM = document.querySelector("#cargando");
 const URL = `../js/todos.json`
 
-const retornoCardContenido = (contenido) => {
+/*const retornoCardContenido = (contenido) => {
     const {nombre, poster, marca, pais, id } = contenido
     return `
     <div class="card" style="width: 12rem;">
@@ -74,7 +74,8 @@ const retornoCardContenido = (contenido) => {
         </div>
         <br>
     </div>`
-} //Tengo que averiguar el asunto de la línea 75
+    
+}*/
 
 const retornoError = () => {
     return `<div class="center white-text">
@@ -98,20 +99,35 @@ const obtenerContenido = (URL) => {
         .then((data) => {
             //console.table(data)
             for (let contenido of data) {
+                const {nombre, poster, marca, pais, id } = contenido
                 if(contenido.categoria === "Proteína"){
                 //cardsAmostrar += retornoCardContenido(contenido)
                 const div = document.createElement('div');
                 div.classList.add('card');
-                div.innerHTML += retornoCardContenido(contenido)
+                //div.innerHTML += retornoCardContenido(contenido)
+                div.innerHTML += `
+                <div class="card" style="width: 12rem;">
+                        <img class="responsive-img" width="100%" loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
+                    <div class="card-body black">
+                        <h5 class="card-title">${nombre}</h5>
+                        <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
+                        <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
+                        <button class="btn btn-primary"${id}">Comprar</button>
+                    </div>
+                    <br>
+                </div>`
+                contenedorProductos.appendChild(div);
+                const boton = document.getElementById(`boton${id}`);
+                /*boton.addEventListener('click', () => {
+                    console.log("La línea 121 me genera un error")
+                })*/
             }
                 swa(`Se han cargado los productos disponibles`, "DodgerBlue", 1000, 'success')
             }
             //contenidoDOM.innerHTML=cardsAmostrar
-            contenedorProductos.appendChild(div);
         })
 
         .catch((error)=> {
-            
             contenidoDOM.innerHTML= retornoError() })
         .finally(()=>cargandoDOM.innerHTML="")
 }

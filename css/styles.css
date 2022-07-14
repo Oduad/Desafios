@@ -198,14 +198,11 @@ a:hover {
     display: inline-block;
     color: dodgerblue;
     position: unset;
+    text-align: center;
 }
 
 .card{
-    margin: 30px;
-}
-
-.responsive-img {
-    text-align: center;
+    margin: 28px;
 }
 
 .modal-container{

@@ -16,7 +16,7 @@ const swa = (mensaje, bgColor, tiempo, icono, color) => {
 }//Falta arreglar el Swal
 
 //Esto corresponde al archivo entregaSups1
-const mostrarProductos = (productosLlegados) => {
+/*const mostrarProductos = (productosLlegados) => {
     const contenedorProductos = document.getElementById('proteinas-contenedor');
 
     productosLlegados.forEach(producto => {
@@ -46,7 +46,7 @@ const mostrarProductos = (productosLlegados) => {
 
 mostrarProductos(proteinasDisponibles)
 
-/*Parte de Storage*/
+Parte de Storage
 function guardarDatos(producto) {
     const datosProducto = {
         nombre: producto.nombre,
@@ -55,7 +55,7 @@ function guardarDatos(producto) {
     }
     let str = JSON.stringify(datosProducto)
     localStorage.setItem("datosProduct", str)
-}
+}*/
 
 const contenidoDOM = document.querySelector("#contenido");
 const cargandoDOM = document.querySelector("#cargando");
@@ -112,15 +112,17 @@ const obtenerContenido = (URL) => {
                         <h5 class="card-title">${nombre}</h5>
                         <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
                         <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
-                        <button class="btn btn-primary"${id}">Comprar</button>
+                        <button id="boton${id}" class="btn btn-primary">Comprar</button>
                     </div>
                     <br>
                 </div>`
                 contenedorProductos.appendChild(div);
                 const boton = document.getElementById(`boton${id}`);
-                /*boton.addEventListener('click', () => {
-                    console.log("La línea 121 me genera un error")
-                })*/
+                boton.addEventListener('click', () => { 
+                    carritoIndex2(id);
+                    guardarDatos2(contenido);
+                    swa(`Producto agregado al carrito`, "DodgerBlue", 1000, 'success')
+                })
             }
                 swa(`Se han cargado los productos disponibles`, "DodgerBlue", 1000, 'success')
             }
@@ -138,6 +140,16 @@ document.addEventListener("DOMContentLoaded",()=>{
     },2000)
 })
 
+/*Parte de Storage*/
+function guardarDatos2(producto) {
+    const datosProducto = {
+        id: producto.id,
+        nombre: producto.nombre
+    }
+    swa(`Producto guardado en localStorage`, "DodgerBlue", 3000, 'success') 
+    let str = JSON.stringify(datosProducto)
+    localStorage.setItem("datosProduct", str)
+}
 
 
 //Dudas

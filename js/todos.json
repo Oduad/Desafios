@@ -31,7 +31,7 @@
     },
     {
         "id": 4,
-        "nombre": "Proteína 4",
+        "nombre": "Hexapro",
         "poster": "/img/hexapro.jpg",
         "precio": "1650",
         "cantidad": "4 lb",
@@ -105,7 +105,7 @@
         "poster": "/img/prote9.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
-        "marca": "Marca 10",
+        "marca": "Marca 11",
         "categoria": "Proteína",
         "pais": "EUA"
     },
@@ -115,7 +115,7 @@
         "poster": "/img/prote10.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
-        "marca": "Marca 10",
+        "marca": "Marca 12",
         "categoria": "Proteína",
         "pais": "EUA"
     },{
@@ -124,7 +124,7 @@
         "poster": "/img/prote11.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
-        "marca": "Marca 10",
+        "marca": "Marca 13",
         "categoria": "Proteína",
         "pais": "EUA"
     }

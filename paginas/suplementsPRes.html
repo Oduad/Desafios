@@ -28,11 +28,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/luxon@1.22.2/build/global/luxon.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
 
 </head>
 
@@ -68,7 +65,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item active" href="../paginas/suplementsP.html">Protein</a></li>
-                  <li><a class="dropdown-item" href="../paginas/suplementsC.html">Add product</a></li>
+                  <li><a class="dropdown-item" href="../paginas/suplementsC.html">Creatine</a></li>
                   <!--li><a class="dropdown-item" href="../paginas/suplements.html">Snacks</a></li>
                   <li><a class="dropdown-item" href="../paginas/suplements.html">Others</a></li-->
                 </ul>
@@ -92,16 +89,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contact</a>
               </li>
-              <!--li class="nav-item">
+              <li class="nav-item">
                 <button class="nav-link text-body" id="open" href="#">Carrito <ion-icon name="cart"></ion-icon><span
                     id="contador-carrito">0</span></button>
-              </li-->
-              <li class="nav-item">
-                <button class="nav-link text-body btn btn-light boton-eliminar" id="open">Carrito<ion-icon name="cart">
-                  </ion-icon><span
-                  id="contador-carrito">0</span></button>
               </li>
-
             </ul>
           </div>
         </div>
@@ -118,20 +109,20 @@
       <img class="img-fluid" src="../img/suplement.jpg" alt="" width="50%">
     </div>
 
-    <div class="col s4 center" id="animacion">
-      <!--Preloader aquí
-      col s4 altera el espacio a la izquierda
-      -->
-      <br>
-      <br>
-      <div class="progress">
-        <div class="indeterminate"></div>
+    <div class="modal-container" id="modal_container">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="cerrar">Cerrar</button>
+        <br><br>
+        <div id="carrito-contenedor"></div>
       </div>
-
-
     </div>
 
-    <div id="cargando" class="center">
+    <div class="col s4 center" id="animacion">
+      <!--Preloader aquí-->
+  </div>
+
+  <div id="cargando" class="center">
       <!--div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-blue-only">
             <div class="circle-clipper left">
@@ -143,34 +134,17 @@
             </div>
           </div>
         </div-->
-      <div class="progress">
-        <div class="indeterminate"></div>
+        <div class="progress">
+          <div class="indeterminate"></div>
       </div>
-    </div>
+  </div>
 
-    <br>
-
-    <div id="contenido" class="row center">
+  <div id="contenido" class="row center conteneprote">
       <!--Todo el contenido se caga desde la API-->
-    </div>
-
-    <div class="modal-container" id="modal_container">
-      <div class="modal-carrito">
-        <br>
-        <h3>Your cart</h3>
-
-        <br><br>
-        <div id="carrito-contenedor">
-
-        </div>
-        <!--button id="cerrar">Cerrar</button-->
-        <button id="cerrar" type="button" class="btn btn-success">Cerrar</button>
-        <!--button id="comprar">Comprar</button-->
-        <button id="comprar" type="button" class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
+  </div>
 
   </main>
+
   <!--Fin del main-->
 
   <!--Inicio del footer-->
@@ -200,9 +174,10 @@
   <!--Fin del footer-->
 
   <!--Parte de JavaScrip-->
+  <!--script src="../js/proteinas.js" type="module"></script-->
   <script src="../js/proteinas.js" type="module"></script>
+  <script src="../js/proteinasDisponibles.js" type="module"></script>
   <script src="../js/modal.js" type="module"></script>
-  <!--script src="../js/finalizar.js" type="module"></script-- esto hay que ponerlo en un achivo aparte>
 
   <!--Parte de JavaScrip -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -210,7 +185,9 @@
     crossorigin="anonymous"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Parte de JavaScrip de AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

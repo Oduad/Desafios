@@ -228,8 +228,9 @@ a:hover {
 .modal-carrito{
     width: 30rem;
     height: 20rem;
-    background-color: whitesmoke;
+    background-color: cornflowerblue;
     overflow-y: auto;
+    text-align: center;
 }
 
 .productoEnCarrito{

@@ -1,6 +1,3 @@
-import { proteinasDisponibles } from './proteinasDisponibles.js'
-import { carritoIndex } from './carritoIndexSup.js'
-
 const swa = (mensaje, bgColor, tiempo, icono, color) => {
     Swal.fire({
         icon: icono || '',
@@ -15,53 +12,12 @@ const swa = (mensaje, bgColor, tiempo, icono, color) => {
     })
 }//Falta arreglar el Swal
 
-//Esto corresponde al archivo entregaSups1
-/*const mostrarProductos = (productosLlegados) => {
-    const contenedorProductos = document.getElementById('proteinas-contenedor');
-
-    productosLlegados.forEach(producto => {
-        const div = document.createElement('div');
-        div.classList.add('card');  //classList lee las clases en proteinas-contenedor y add es Para agregar una clase(card) en ese div
-        div.innerHTML += `<div class="card" style="width: 8rem;">
-                    <img src="${producto.img}" class="card-img-top responsive-img" width="100%" alt="Foto del producto">
-                    <div class="card-body">
-                        <h5 class="card-title">${producto.nombre}</h5>
-                        <p class="card-text">Id: ${producto.id}</p>
-                        <p class="card-text">Precio:$ ${producto.precio}</p>
-                        <button class="btn btn-primary" id="boton${producto.id}">Comprar</button>
-                    </div>
-      </div>`;  //Esto es lo que va en ese card
-
-        contenedorProductos.appendChild(div);
-
-        const boton = document.getElementById(`boton${producto.id}`);
-        boton.addEventListener('click', () => {
-            carritoIndex(producto.id);
-            guardarDatos(producto);
-            alert(`Se agregó ${producto.nombre}`);
-        })
-
-    })
-}
-
-mostrarProductos(proteinasDisponibles)
-
-Parte de Storage
-function guardarDatos(producto) {
-    const datosProducto = {
-        nombre: producto.nombre,
-        id: producto.id,
-        precio: producto.precio
-    }
-    let str = JSON.stringify(datosProducto)
-    localStorage.setItem("datosProduct", str)
-}*/
-
 const contenidoDOM = document.querySelector("#contenido");
 const cargandoDOM = document.querySelector("#cargando");
 const URL = `../js/todos.json`
 
-/*const retornoCardContenido = (contenido) => {
+/*Este método lo quité porque necesito un botón. ¿Cómo lo podría poner?*/
+const retornoCardContenido = (contenido) => {
     const {nombre, poster, marca, pais, id } = contenido
     return `
     <div class="card" style="width: 12rem;">
@@ -75,7 +31,7 @@ const URL = `../js/todos.json`
         <br>
     </div>`
     
-}*/
+}
 
 const retornoError = () => {
     return `<div class="center white-text">
@@ -84,8 +40,8 @@ const retornoError = () => {
     <br><br>
     <i class="large material-icons">sentiment_very_dissatisfied</i>
     <br><br>
-</div>`
-}
+</div>` 
+} 
 
 //Fetch le pide información al servidor y si todo está bien, el servidor manda 
 //Response que se queda el fetch en formato JSON
@@ -106,8 +62,8 @@ const obtenerContenido = (URL) => {
                 div.classList.add('card');
                 //div.innerHTML += retornoCardContenido(contenido)
                 div.innerHTML += `
-                <div class="card" style="width: 12rem;">
-                        <img class="responsive-img" width="100%" loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
+                <div class="card center" style="width: 10rem;">
+                        <img class="responsive-img" width="80%" loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
                     <div class="card-body black">
                         <h5 class="card-title">${nombre}</h5>
                         <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
@@ -146,13 +102,14 @@ function guardarDatos2(producto) {
         id: producto.id,
         nombre: producto.nombre
     }
-    swa(`Producto guardado en localStorage`, "DodgerBlue", 3000, 'success') 
+    //swa(`Producto guardado en localStorage`, "DodgerBlue", 3000, 'success') 
     let str = JSON.stringify(datosProducto)
     localStorage.setItem("datosProduct", str)
 }
 
 let carritoCompras2 = [];
 
+/*En un after hicieron este método en otro archivo.js pero a mí no me lo reconocía ni con export*/
 const carritoIndex2 = (productoId) => {
     const contenedorCarrito = document.getElementById("carrito-contenedor")
 
@@ -169,12 +126,50 @@ const carritoIndex2 = (productoId) => {
                 div.classList.add('productoEnCarrito');
                 div.innerHTML += `<p>${producto.nombre}</p>
                 <p>Precio: ${producto.precio}</p>
-                <button id="eliminar${producto.id}" class="boton-eliminar">Eliminar<i class="fa-solid fa-trash-can"></i></button>`
-        
+                <button id="eliminar${producto.id}" class="btn btn-light boton-eliminar" type="button"><ion-icon name="trash"></ion-icon></button>`
                 contenedorCarrito.appendChild(div)
+                const boton = document.getElementById(`eliminar${producto.id}`);
+                boton.addEventListener('click', () => {
+                    //div.classList.remove('productoEnCarrito');
+                    //carritoCompras2.slice(0, 1)
+                    contenedorCarrito.removeChild(div)
+                    swa(`Producto eliminado del carrito`, "DodgerBlue", 1000, 'success')
+                })
+                const botonFinalizarPedido = document.getElementById(`comprar`);
+                botonFinalizarPedido.addEventListener('click', () => {
+                    finalizarPedido()
+                    swa(`Llene el formulario para comprar`, "DodgerBlue", 1000, 'success')
+            })
             }
             renderProductoCarrito()
         })
+}
+
+const finalizarPedido = () => {
+    //let cardsAmostrar = ""
+    const contenedorProductos = document.getElementById('proteinas-contenedor');
+    
+            //for (let contenido of data) {
+
+                const divF = document.createElement('div');
+                divF.classList.add('card');
+
+                divF.innerHTML += `
+                <div class="card center" style="width: 10rem;">
+                        <img class="responsive-img" width="80%" loading="lazy" src="poster" alt="" title="THE MARTIAN">
+                    <div class="card-body black">
+                        <h5 class="card-title">nombre</h5>
+                        <p class="yellow-text">Marca: <span class="white-text">marca</span></p>
+                        <p class="yellow-text">Pais: <span class="white-text">pais</span></p>
+                        <button id="botonid" class="btn btn-primary">Comprar</button>
+                    </div>
+                    <br>
+                </div>`
+            
+                contenedorProductos.appendChild(divF);
+            //}
+            //contenidoDOM.innerHTML=cardsAmostrar
+        
 }
 
 //Dudas
@@ -187,3 +182,4 @@ const carritoIndex2 = (productoId) => {
 // Hacer página y formulario y que me lleve al formulario de alto.
 // DOJO's para lenguajes de programación - El recomendado es el toolkit que son ejercicios de entrenamiento
 // Adoptando la lógica,  
+//¿Se viene encapsulamiento y qué más en JS?

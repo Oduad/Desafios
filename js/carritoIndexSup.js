@@ -23,7 +23,7 @@ const carritoIndex = (productoId) => {
 export {carritoIndex}
 
 
-let carritoCompras2 = [];
+/*let carritoCompras2 = [];
 const URL2 = `../js/todos.json`
 
 const carritoIndex2 = (productoId) => {
@@ -44,4 +44,4 @@ const carritoIndex2 = (productoId) => {
     renderProductoCarrito()
 }
 
-export {carritoIndex2}
+export {carritoIndex2}*/

@@ -151,6 +151,31 @@ function guardarDatos2(producto) {
     localStorage.setItem("datosProduct", str)
 }
 
+let carritoCompras2 = [];
+
+const carritoIndex2 = (productoId) => {
+    const contenedorCarrito = document.getElementById("carrito-contenedor")
+
+    fetch(URL)
+        .then((response) => response.json())
+        .then((data) => {
+
+            const renderProductoCarrito = () => {
+    
+                let producto = data.find(producto => producto.id == productoId)
+                carritoCompras2.push(producto);
+        
+                let div = document.createElement('div');
+                div.classList.add('productoEnCarrito');
+                div.innerHTML += `<p>${producto.nombre}</p>
+                <p>Precio: ${producto.precio}</p>
+                <button id="eliminar${producto.id}" class="boton-eliminar">Eliminar<i class="fa-solid fa-trash-can"></i></button>`
+        
+                contenedorCarrito.appendChild(div)
+            }
+            renderProductoCarrito()
+        })
+}
 
 //Dudas
 //1. ¿En las líneas 5 no sería mejor var? const porque siempre se pide

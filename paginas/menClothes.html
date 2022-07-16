@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <!-- Required meta tags -->
@@ -14,7 +14,7 @@
   <!-- SEO Keywords-->
   <meta name="keywords" content="">
   <!--SEO Título-->
-  <title>Suplements</title>
+  <title>Clothes</title>
   <!--SEO Keywords-->
   <meta name="description" content="">
   <!-- Librería AOS -->
@@ -24,16 +24,10 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Estilos propios-->
   <link rel="stylesheet" href="../css/styles.css">
+  <!--Sin sass: href="estilos.css"-->
   <!--Librería para animaciones-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/luxon@1.22.2/build/global/luxon.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -43,7 +37,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light color_header">
         <div class="container-fluid color_header">
           <a class="navbar-brand" href="../index.html">
-            <img src="../img/logotitulo.png" class="logo_header animate__heartBeat" alt="Logotipo de suplementos"
+            <img src="../img/logotitulo.png" class="logo_header animate__heartBeat" alt="Logotipo del suplementos"
               data-aos="zoom-in-down">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -67,24 +61,26 @@
                   <i class="icon ion-md-flask"></i> Suplements
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item active" href="../paginas/suplementsP.html">Proteins</a></li>
+                  <li><a class="dropdown-item" href="../paginas/suplementsP.html">Proteins</a></li>
                   <li><a class="dropdown-item" href="../paginas/suplementsC.html">Creatine</a></li>
                   <li><a class="dropdown-item" href="../paginas/agregarProducto.html">Add product</a></li>
                   <!--li><a class="dropdown-item" href="../paginas/suplements.html">Snacks</a></li>
                   <li><a class="dropdown-item" href="../paginas/suplements.html">Others</a></li-->
                 </ul>
               </li>
+
               <!--li class="nav-item">
                 <a class="nav-link" href="paginas/clothes.html"> <i class="icon ion-md-shirt"></i> Clothes</a>
               </li-->
+
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="icon ion-md-shirt"></i> Clothes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="../paginas/womanClothes.html">Lady</a></li>
-                  <li><a class="dropdown-item" href="../paginas/menClothes.html">Gentleman</a></li>
+                    <li><a class="dropdown-item" href="../paginas/womanClothes.html">Lady</a></li>
+                    <li><a class="dropdown-item" href="../paginas/menClothes.html">Gentleman</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -100,16 +96,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contact</a>
               </li>
-              <!--li class="nav-item">
-                <button class="nav-link text-body" id="open" href="#">Carrito <ion-icon name="cart"></ion-icon><span
-                    id="contador-carrito">0</span></button>
-              </li-->
-              <li class="nav-item">
-                <button class="nav-link text-body btn btn-light boton-eliminar" id="open">Carrito<ion-icon name="cart">
-                  </ion-icon><span
-                  id="contador-carrito">0</span></button>
-              </li>
-
             </ul>
           </div>
         </div>
@@ -118,68 +104,54 @@
   </header>
   <!--Fin del header-->
 
-  <!--Inicio del main-->
-  <main id="proteinas-contenedor">
-
-    <div class="text-center">
-      <h1 id="titulo">PROTEÍNAS</h1><br>
-      <img class="img-fluid img-thumbnail imagenArriba" src="../img/suplement.jpg" alt="" width="50%">
+  <main>
+    <!--div class="h1_index text-center">
+      <h1 data-aos="zoom-out-down" class="container-fluid" id="titulo"> Pulsa en Suplementos del Menú </h1>
+    </div No permite usar bien ese data-aos="zoom-out-down -->
+    <div class="div1 container-fluid h1_index text-center">
+      <h1 class="container-fluid" id="titulo">MEN CLOTHES</h1><br><br>
+      <!--p id="slogan">There will be a nice image bellow</p-->
+      <img class="responsive-img imagenArriba img-thumbnail" src="../img/ropahombre.jpg" alt="" width="50%">
     </div>
 
-    <div class="col s4 center" id="animacion">
-      <!--Preloader aquí
-      col s4 altera el espacio a la izquierda
-      -->
-      <br>
-      <br>
-      <div class="progress">
-        <div class="indeterminate"></div>
-      </div>
-
-
+    <div class="div1 container-fluid h1_index text-center">
+      <!--h1 data-aos="zoom-out-down" class="container-fluid" id="titulo"> Odi's Suplements </h1-->
+      <h1 class="container-fluid" id="titulo"> Odi's clothes </h1> <br><br>
+      <img src="img/maude.jpg" alt="" class="imagenArriba responsive-img img-thumbnail " width="60%">
     </div>
 
-    <div id="cargando" class="center">
-      <!--div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue-only">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div><div class="gap-patch">
-              <div class="circle"></div>
-            </div><div class="circle-clipper right">
-              <div class="circle"></div>
+    <div>
+      <h2 class="center">Available Clothes</h2>
+      <ul class="collection" id="listadoProductos">
+        <li class="collection-item">Producto 1</li>
+        <li class="collection-item">Producto 2</li>
+        <li class="collection-item">Producto 3</li>
+        <li class="collection-item">Producto 4</li>
+        <li class="collection-item">Producto 5</li>
+        <li class="collection-item">Producto 6</li>
+        <li class="collection-item">Producto 7</li>
+        <li class="collection-item">Producto 8</li>
+        <li class="collection-item">Producto 9</li>
+        <li class="collection-item">Producto 10</li>
+      </ul>
+    </div>
+
+    <!-- <div class="d-flex">
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <h4 class="text-light font-weight-bold" id="titulo">Odi's Suplements</h4>
             </div>
-          </div>
-        </div-->
-      <div class="progress">
-        <div class="indeterminate"></div>
-      </div>
-    </div>
-
-    <br>
-
-    <div id="contenido" class="row center">
-      <!--Todo el contenido se caga desde la API-->
-    </div>
-
-    <div class="modal-container" id="modal_container">
-      <div class="modal-carrito">
-        <br>
-        <h3>Your cart</h3>
-
-        <br><br>
-        <div id="carrito-contenedor">
-
+            <div class="menu">
+                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-home mr-1"></i> Home</a>
+                <a href="#"class="d-block text-light p-3 mr-9 lead"> <i class="icon ion-logo-javascript"></i>  Mass winners</a>
+                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-md-school"></i> Proteins</a>
+                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-flask"></i> Snacks</a>
+                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-rocket"></i> Clothes</a>
+            </div>
         </div>
-        <!--button id="cerrar">Cerrar</button-->
-        <button id="cerrar" type="button" class="btn btn-success">Cerrar</button>
-        <!--button id="comprar">Comprar</button-->
-        <button id="comprar" type="button" class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
+    </div> -->
 
   </main>
-  <!--Fin del main-->
 
   <!--Inicio del footer-->
   <footer class="text-center text-white" style="background-color: #f1f1f1;">
@@ -207,19 +179,10 @@
   </footer>
   <!--Fin del footer-->
 
-  <!--Parte de JavaScrip-->
-  <script src="../js/proteinas.js" type="module"></script>
-  <script src="../js/modal.js" type="module"></script>
-  <!--script src="../js/finalizar.js" type="module"></script-->
-  <!-- La línea de arriba hay que ponerlo en un achivo aparte-->
-
   <!--Parte de JavaScrip -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <!-- Parte de JavaScrip de AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

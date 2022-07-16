@@ -15,7 +15,7 @@
     overflow-x: auto;
 }*/
 
-/*PC*/
+/*DESKTOP*/
 .menu-bar .navbar {
     background-image: linear-gradient(-90deg, rgb(230, 230, 104), rgb(55, 194, 97));
 }
@@ -93,6 +93,33 @@ h1 {
     }
   }
 
+  /*Misión, visión, valores DESKTOP*/
+  .img_mvv {
+    max-width: 60px;
+  }
+  
+  .img_mvv:hover {
+    cursor: pointer;
+    max-width: 70px;
+  }
+  
+  #mission, #vission,
+  #values {
+    color: #1C94E5;
+    /*Abajo se usa una variable*/
+    font-size: 22px;
+  }
+  
+  .caja1_index, .caja2_index,
+  .caja3_index {
+    /*Abajo se aplica el extend*/
+    font-size: 15px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+
 .div-video,
 .div1 {
     padding: 50px;
@@ -121,7 +148,7 @@ body {
     justify-content: center;
 }
 
-.imagen_index {
+.imagenArriba {
     text-align: center;
     animation: imagenIndex 3s;
   }
@@ -249,6 +276,12 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+/*Rutinas DESKTOP*/
+
+.btnGalery{
+    margin: 15px;
 }
 
 /*Contacto DESKTOP*/

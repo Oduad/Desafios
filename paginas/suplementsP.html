@@ -67,9 +67,9 @@
                   <i class="icon ion-md-flask"></i> Suplements
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item active" href="../paginas/suplementsP.html">Proteins</a></li>
-                  <li><a class="dropdown-item" href="../paginas/suplementsC.html">Creatine</a></li>
-                  <li><a class="dropdown-item" href="../paginas/agregarProducto.html">Add product</a></li>
+                  <li><a class="dropdown-item active" href="../paginas/suplementsP.html"><ion-icon name="flask"></ion-icon> Proteins</a></li>
+                  <li><a class="dropdown-item" href="../paginas/suplementsC.html"><ion-icon name="flash"></ion-icon> Creatine</a></li>
+                  <li><a class="dropdown-item" href="../paginas/agregarProducto.html"><ion-icon name="add-circle"></ion-icon> Add product</a></li>
                   <!--li><a class="dropdown-item" href="../paginas/suplements.html">Snacks</a></li>
                   <li><a class="dropdown-item" href="../paginas/suplements.html">Others</a></li-->
                 </ul>
@@ -83,8 +83,8 @@
                   <i class="icon ion-md-shirt"></i> Clothes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="../paginas/womanClothes.html">Lady</a></li>
-                  <li><a class="dropdown-item" href="../paginas/menClothes.html">Gentleman</a></li>
+                  <li><a class="dropdown-item" href="../paginas/womanClothes.html"> <ion-icon name="woman"></ion-icon>Women</a></li>
+                  <li><a class="dropdown-item" href="../paginas/menClothes.html"><ion-icon name="man"></ion-icon>Men</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -93,8 +93,8 @@
                   <i class="icon ion-md-fitness"></i> Routines
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="../paginas/womanroutine.html">Lady</a></li>
-                  <li><a class="dropdown-item" href="../paginas/menroutine.html">Gentleman</a></li>
+                  <li><a class="dropdown-item" href="../paginas/womanroutine.html"> <ion-icon name="woman"></ion-icon> Women</a></li>
+                  <li><a class="dropdown-item" href="../paginas/menroutine.html"> <ion-icon name="man"></ion-icon> Men</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -105,8 +105,8 @@
                     id="contador-carrito">0</span></button>
               </li-->
               <li class="nav-item">
-                <button class="nav-link text-body btn btn-light boton-eliminar" id="open">Carrito<ion-icon name="cart">
-                  </ion-icon><span
+                <button class="nav-link text-body btn btn-light boton-eliminar" id="open"> Cart <ion-icon name="cart">
+                  </ion-icon> <span
                   id="contador-carrito">0</span></button>
               </li>
 
@@ -123,7 +123,7 @@
 
     <div class="text-center">
       <h1 id="titulo">PROTEÍNAS</h1><br>
-      <img class="img-fluid img-thumbnail imagenArriba" src="../img/suplement.jpg" alt="" width="50%">
+      <img class="img-fluid img-thumbnail imagenArriba" src="../img/suplement.jpg" alt="" width="70%">
     </div>
     
 
@@ -163,36 +163,36 @@
     <div class="modal-container" id="modal_container">
       <div class="modal-carrito">
         <br>
-        <h3>Your cart</h3>
+        <h3>Your cart <ion-icon name="cart"></ion-icon></h3>
 
         <br><br>
         <div id="carrito-contenedor">
 
         </div>
         <!--button id="cerrar">Cerrar</button-->
-        <button id="cerrar" type="button" class="btn btn-success btn-carrito">Cerrar</button>
+        <button id="cerrar" type="button" class="btn btn-success btn-carrito"><ion-icon name="close-circle"></ion-icon> Close</button>
         <!--button id="comprar">Comprar</button-->
-        <button id="comprar" type="button" class="btn btn-primary btn-carrito">Comprar</button>
+        <button id="comprar" type="button" class="btn btn-primary btn-carrito"> <ion-icon name="card"></ion-icon> Buy</button>
       </div>
     </div>
 
     <div class="modal-container2" id="modal_container2">
       <div class="modal-carrito2">
         <br>
-        <h3>Finalizar Pedido</h3>
+        <h3>End order</h3>
         <br><br>
         <div id="carrito-contenedor2">
-          <p>Ingrese sus datos para enviar sy pedido:</p><br> 
-            <input type="text" id="inputNombre2" placeholder="Ingrese su nombre"><br><br>
-            <input type="tel"  id="inputTelefono2" placeholder="Su teléfono móvil"><br><br>
-            <input type="email"  id="inputEmail2" placeholder="Correo electrónico"><br><br>
+          <p>Enter your data to send your order:</p><br> 
+            <input type="text" id="inputNombre2" placeholder="Name "><br><br>
+            <input type="tel"  id="inputTelefono2" placeholder="Cellpone number"><br><br>
+            <input type="email"  id="inputEmail2" placeholder="Email"><br><br>
             <p id="productosComprados2"></p>
             <input type="submit" class="btn orange white-text" id="submit" value="Enviar">
         </div>
         <!--button id="cerrar">Cerrar</button-->
 .
-        <button id="enviar" type="button" class="btn btn-success btn-carrito">Enviar</button>
-        <button id="cancelar" type="button" class="btn btn-success btn-carrito">Cancelar</button>
+        <button id="enviar" type="button" class="btn btn-success btn-carrito"> <ion-icon name="card"></ion-icon> Send</button>
+        <button id="cancelar" type="button" class="btn btn-success btn-carrito">Cancel</button>
       </div>
     </div>
 
@@ -237,8 +237,9 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+    <!--Ionic--> 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
   <!-- Parte de JavaScrip de AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

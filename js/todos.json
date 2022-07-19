@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Carnivor",
-        "poster": "/img/carnivor.jpg",
+        "poster": "../img/carnivor.jpg",
         "precio": "980",
         "cantidad": "5 lb",
         "marca": "Marca 1",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "nombre": "Gold St",
-        "poster": "/img/goldst.jpg",
+        "poster": "../img/goldst.jpg",
         "precio": "1100",
         "cantidad": "4 lb",
         "marca": "Marca 2",
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "nombre": "Prowinner",
-        "poster": "/img/prowinner.jpg",
+        "poster": "../img/prowinner.jpg",
         "precio": "1250",
         "cantidad": "5.2 lb",
         "marca": "Marca 3",
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "nombre": "Hexapro",
-        "poster": "/img/hexapro.jpg",
+        "poster": "../img/hexapro.jpg",
         "precio": "1650",
         "cantidad": "4 lb",
         "marca": "Marca 4",
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "nombre": "ISO100",
-        "poster": "/img/iso.jpg",
+        "poster": "../img/iso.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 5",
@@ -52,7 +52,7 @@
     {
         "id": 6,
         "nombre": "Isopure",
-        "poster": "/img/isopure.jpg",
+        "poster": "../img/isopure.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 6",
@@ -62,7 +62,7 @@
     {
         "id": 7,
         "nombre": "Creatina 1",
-        "poster": "/img/creatina1.jpg",
+        "poster": "../img/creatina1.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 7",
@@ -72,7 +72,7 @@
     {
         "id": 8,
         "nombre": "Creatina 2",
-        "poster": "/img/creatina2.jpg",
+        "poster": "../img/creatina2.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 8",
@@ -82,7 +82,7 @@
     {
         "id": 9,
         "nombre": "Creatina 3",
-        "poster": "/img/creatina3.jpg",
+        "poster": "../img/creatina3.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 9",
@@ -92,7 +92,7 @@
     {
         "id": 10,
         "nombre": "Creatina 4",
-        "poster": "/img/creatina4.jpg",
+        "poster": "../img/creatina4.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 10",
@@ -102,7 +102,7 @@
     {
         "id": 11,
         "nombre": "Pro Whey",
-        "poster": "/img/prote9.jpg",
+        "poster": "../img/prote9.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 11",
@@ -112,7 +112,7 @@
     {
         "id": 12,
         "nombre": "Performance",
-        "poster": "/img/prote10.jpg",
+        "poster": "../img/prote10.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 12",
@@ -121,7 +121,7 @@
     },{
         "id": 13,
         "nombre": "Master",
-        "poster": "/img/prote11.jpg",
+        "poster": "../img/prote11.jpg",
         "precio": "1500",
         "cantidad": "5 lb",
         "marca": "Marca 13",

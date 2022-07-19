@@ -118,10 +118,8 @@ const carritoIndex2 = (productoId) => {
         .then((data) => {
 
             const renderProductoCarrito = () => {
-    
                 let producto = data.find(producto => producto.id == productoId)
                 carritoCompras2.push(producto);
-        
                 let div = document.createElement('div');
                 div.classList.add('productoEnCarrito');
                 div.innerHTML += `<p>${producto.nombre}</p>
@@ -130,46 +128,16 @@ const carritoIndex2 = (productoId) => {
                 contenedorCarrito.appendChild(div)
                 const boton = document.getElementById(`eliminar${producto.id}`);
                 boton.addEventListener('click', () => {
-                    //div.classList.remove('productoEnCarrito');
-                    //carritoCompras2.slice(0, 1)
                     contenedorCarrito.removeChild(div)
                     swa(`Producto eliminado del carrito`, "DodgerBlue", 1000, 'success')
                 })
                 const botonFinalizarPedido = document.getElementById(`comprar`);
                 botonFinalizarPedido.addEventListener('click', () => {
-                    finalizarPedido()
                     swa(`Llene el formulario para comprar`, "DodgerBlue", 1000, 'success')
             })
             }
             renderProductoCarrito()
         })
-}
-
-const finalizarPedido = () => {
-    //let cardsAmostrar = ""
-    const contenedorProductos = document.getElementById('proteinas-contenedor');
-    
-            //for (let contenido of data) {
-
-                const divF = document.createElement('div');
-                divF.classList.add('card');
-
-                divF.innerHTML += `
-                <div class="card center" style="width: 10rem;">
-                        <img class="responsive-img" width="80%" loading="lazy" src="poster" alt="" title="THE MARTIAN">
-                    <div class="card-body black">
-                        <h5 class="card-title">nombre</h5>
-                        <p class="yellow-text">Marca: <span class="white-text">marca</span></p>
-                        <p class="yellow-text">Pais: <span class="white-text">pais</span></p>
-                        <button id="botonid" class="btn btn-primary">Comprar</button>
-                    </div>
-                    <br>
-                </div>`
-            
-                contenedorProductos.appendChild(divF);
-            //}
-            //contenidoDOM.innerHTML=cardsAmostrar
-        
 }
 
 //Dudas

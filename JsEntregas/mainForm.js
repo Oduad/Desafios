@@ -1,6 +1,6 @@
-const inputNombre = document.querySelector("#inputNombre")
-const inputTelefono = document.querySelector("#inputTelefono")
-const inputEmail = document.querySelector("#inputEmail")
+const inputNombre = document.querySelector("#inputNombre2")
+const inputTelefono = document.querySelector("#inputTelefono2")
+const inputEmail = document.querySelector("#inputEmail2")
 const btnSubmit = document.querySelector("#submit")
 
 let datosDeInput = ""

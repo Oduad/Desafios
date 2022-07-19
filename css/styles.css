@@ -122,8 +122,13 @@ h1 {
 
 .div-video,
 .div1 {
-    padding: 50px;
+    padding: 40px;
 }
+
+.video_index {
+    max-width: 80vw;
+    min-height: 85vh;
+  }
 
 .form {
     width: 100%;
@@ -323,6 +328,7 @@ a:hover {
 /*Contacto DESKTOP*/
 #titulo {
     font-size: 50px;
+    color: mediumpurple;
 }
 
 .div-contact {
@@ -536,6 +542,12 @@ a:hover {
 }
 
 /*TABLET*/
+
+.video_index {
+    max-width: 72vw;
+    min-height: 50vh;
+  }
+
 @media (min-width: 577px) and (max-width: 768px) {
 
     #titulo {
@@ -562,6 +574,12 @@ a:hover {
 }
 
 /*CELPHONE*/
+
+.video_index {
+    max-width: 65vw;
+    min-height: 50vh;
+  }
+
 @media (max-width: 576px) {
 
     #titulo {

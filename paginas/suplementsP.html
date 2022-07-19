@@ -125,22 +125,20 @@
       <h1 id="titulo">PROTEÍNAS</h1><br>
       <img class="img-fluid img-thumbnail imagenArriba" src="../img/suplement.jpg" alt="" width="50%">
     </div>
+    
 
-    <div class="col s4 center" id="animacion">
-      <!--Preloader aquí
-      col s4 altera el espacio a la izquierda
-      -->
+    <!--div class="col s4 center" id="animacion">
+      <Preloader aquí
+      col s4 altera el espacio a la izquierda>
       <br>
       <br>
       <div class="progress">
         <div class="indeterminate"></div>
       </div>
-
-
-    </div>
+    </div-->
 
     <div id="cargando" class="center">
-      <!--div class="preloader-wrapper big active">
+      <div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-blue-only">
             <div class="circle-clipper left">
               <div class="circle"></div>
@@ -150,7 +148,7 @@
               <div class="circle"></div>
             </div>
           </div>
-        </div-->
+        </div>
       <div class="progress">
         <div class="indeterminate"></div>
       </div>
@@ -172,9 +170,29 @@
 
         </div>
         <!--button id="cerrar">Cerrar</button-->
-        <button id="cerrar" type="button" class="btn btn-success">Cerrar</button>
+        <button id="cerrar" type="button" class="btn btn-success btn-carrito">Cerrar</button>
         <!--button id="comprar">Comprar</button-->
-        <button id="comprar" type="button" class="btn btn-primary">Comprar</button>
+        <button id="comprar" type="button" class="btn btn-primary btn-carrito">Comprar</button>
+      </div>
+    </div>
+
+    <div class="modal-container2" id="modal_container2">
+      <div class="modal-carrito2">
+        <br>
+        <h3>Finalizar Pedido</h3>
+        <br><br>
+        <div id="carrito-contenedor2">
+          <p>Ingrese sus datos para enviar sy pedido:</p><br> 
+            <input type="text" id="inputNombre2" placeholder="Ingrese su nombre"><br><br>
+            <input type="tel"  id="inputTelefono2" placeholder="Su teléfono móvil"><br><br>
+            <input type="email"  id="inputEmail2" placeholder="Correo electrónico"><br><br>
+            <p id="productosComprados2"></p>
+            <input type="submit" class="btn orange white-text" id="submit" value="Enviar">
+        </div>
+        <!--button id="cerrar">Cerrar</button-->
+.
+        <button id="enviar" type="button" class="btn btn-success btn-carrito">Enviar</button>
+        <button id="cancelar" type="button" class="btn btn-success btn-carrito">Cancelar</button>
       </div>
     </div>
 
@@ -210,6 +228,7 @@
   <!--Parte de JavaScrip-->
   <script src="../js/proteinas.js" type="module"></script>
   <script src="../js/modal.js" type="module"></script>
+  <script src="../js/mainForm.js" type="module"></script>
   <!--script src="../js/finalizar.js" type="module"></script-->
   <!-- La línea de arriba hay que ponerlo en un achivo aparte-->
 

@@ -26,7 +26,7 @@ const retornoCardContenido = (contenido) => {
             <h5 class="card-title">${nombre}</h5>
             <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
             <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
-            <button class="btn btn-primary"${id}">Comprar</button>
+            <button class="btn btn-primary"${id}"> Comprar</button>
         </div>
         <br>
     </div>`
@@ -68,7 +68,7 @@ const obtenerContenido = (URL) => {
                         <h5 class="card-title">${nombre}</h5>
                         <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
                         <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
-                        <button id="boton${id}" class="btn btn-primary">Comprar</button>
+                        <button id="boton${id}" class="btn btn-primary">Add <ion-icon name="cart"></ion-icon> </button>
                     </div>
                     <br>
                 </div>`

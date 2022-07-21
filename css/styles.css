@@ -248,7 +248,7 @@ a:hover {
     visibility: hidden;
     transition: opacity 0.3s ease;
     border-radius: 10px;
-    z-index: 100;
+    z-index: 10;
 }
 
 .modal-active{
@@ -290,7 +290,7 @@ a:hover {
     position: fixed;
     background-color: transparent;
     width: 100%;
-    height: 100px;
+    height: 250px;
     visibility: hidden;
     transition: opacity 0.3s ease;
     border-radius: 10px;
@@ -305,7 +305,7 @@ a:hover {
 
 .modal-carrito2{
     width: 30rem;
-    height: 20rem;
+    height: 30rem;
     background-color: #1C94E5;
     overflow-y: auto;
     text-align: center;
@@ -320,9 +320,13 @@ a:hover {
 }
 
 /*Rutinas DESKTOP*/
-
 .btnGalery{
     margin: 15px;
+}
+
+/*Calculadora DESKTOP*/
+.calculadora {
+    text-align: center;
 }
 
 /*Contacto DESKTOP*/
@@ -577,7 +581,7 @@ a:hover {
 
 .video_index {
     max-width: 65vw;
-    min-height: 50vh;
+    min-height: 40vh;
   }
 
 @media (max-width: 576px) {

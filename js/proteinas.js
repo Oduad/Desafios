@@ -10,7 +10,9 @@ const swa = (mensaje, bgColor, tiempo, icono, color) => {
         background: bgColor || 'white',
         color: color || '#ffffff'
     })
-}//Falta arreglar el Swal
+}//Falta arreglar el Swal    
+
+export{swa}
 
 const contenidoDOM = document.querySelector("#contenido");
 const cargandoDOM = document.querySelector("#cargando");
@@ -45,7 +47,9 @@ const retornoError = () => {
 
 //Fetch le pide información al servidor y si todo está bien, el servidor manda 
 //Response que se queda el fetch en formato JSON
-//Todo JSON que devuelve un servidor es en formato String
+//Todo JSON que devuelve un servidor es en formato 
+
+let pagoTotal = 0;
 
 const obtenerContenido = (URL) => {
     //let cardsAmostrar = ""
@@ -55,7 +59,7 @@ const obtenerContenido = (URL) => {
         .then((data) => {
             //console.table(data)
             for (let contenido of data) {
-                const {nombre, poster, marca, pais, id } = contenido
+                const {nombre, precio, poster, marca, pais, id } = contenido
                 if(contenido.categoria === "Proteína"){
                 //cardsAmostrar += retornoCardContenido(contenido)
                 const div = document.createElement('div');
@@ -66,18 +70,25 @@ const obtenerContenido = (URL) => {
                         <img class="responsive-img" width="80%" loading="lazy" src="${poster}" alt="" title="THE MARTIAN">
                     <div class="card-body black">
                         <h5 class="card-title">${nombre}</h5>
+                        <p class="yellow-text">Precio: $<span class="white-text">${precio}</span></p>
                         <p class="yellow-text">Marca: <span class="white-text">${marca}</span></p>
                         <p class="yellow-text">Pais: <span class="white-text">${pais}</span></p>
                         <button id="boton${id}" class="btn btn-primary">Add <ion-icon name="cart"></ion-icon> </button>
                     </div>
                     <br>
                 </div>`
+                //let pago = parseInt(precio);
                 contenedorProductos.appendChild(div);
+
+                const pagoF = document.getElementById('totalP');
                 const boton = document.getElementById(`boton${id}`);
-                boton.addEventListener('click', () => { 
+                boton.addEventListener('click', () => {                 
+                    let pago = Number(precio);  
+                    pagoTotal += pago;
+                    pagoF.value = "$"+pagoTotal;
                     carritoIndex2(id);
                     guardarDatos2(contenido);
-                    swa(`Producto agregado al carrito`, "DodgerBlue", 1000, 'success')
+                    swa(`${nombre} agregado al carrito y llevas ${pagoTotal} `, "DodgerBlue", 1000, 'success')
                 })
             }
                 swa(`Se han cargado los productos disponibles`, "DodgerBlue", 1000, 'success')
@@ -100,6 +111,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 function guardarDatos2(producto) {
     const datosProducto = {
         id: producto.id,
+        precio: producto.precio,
         nombre: producto.nombre
     }
     //swa(`Producto guardado en localStorage`, "DodgerBlue", 3000, 'success') 
@@ -112,6 +124,7 @@ let carritoCompras2 = [];
 /*En un after hicieron este método en otro archivo.js pero a mí no me lo reconocía ni con export*/
 const carritoIndex2 = (productoId) => {
     const contenedorCarrito = document.getElementById("carrito-contenedor")
+    const pagoT = document.getElementById("total")
 
     fetch(URL)
         .then((response) => response.json())
@@ -120,16 +133,30 @@ const carritoIndex2 = (productoId) => {
             const renderProductoCarrito = () => {
                 let producto = data.find(producto => producto.id == productoId)
                 carritoCompras2.push(producto);
+                /*let cantidad = 0;
+                for(let i = 0; i < carritoCompras2.length; i++){ 
+                        cantidad++;
+                        console.log(cantidad)
+                }*/
                 let div = document.createElement('div');
                 div.classList.add('productoEnCarrito');
                 div.innerHTML += `<p>${producto.nombre}</p>
                 <p>Precio: ${producto.precio}</p>
                 <button id="eliminar${producto.id}" class="btn btn-light boton-eliminar" type="button"><ion-icon name="trash"></ion-icon></button>`
                 contenedorCarrito.appendChild(div)
+
+                /*let div2 = document.createElement('total');
+                div2.classList.add('productoEnCarrito2');
+                div2.innerHTML += `<p>${pagoTotal}</p>`
+                pagoT.appendChild(div2)*/
                 const boton = document.getElementById(`eliminar${producto.id}`);
+                const pagoF = document.getElementById('totalP');
                 boton.addEventListener('click', () => {
                     contenedorCarrito.removeChild(div)
-                    swa(`Producto eliminado del carrito`, "DodgerBlue", 1000, 'success')
+                    let pago = Number(producto.precio);  
+                    pagoTotal -= pago;
+                    pagoF.value = "$"+pagoTotal;
+                    swa(`${producto.nombre} eliminado del carrito`, "DodgerBlue", 1000, 'success')
                 })
                 const botonFinalizarPedido = document.getElementById(`comprar`);
                 botonFinalizarPedido.addEventListener('click', () => {

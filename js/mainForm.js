@@ -28,5 +28,5 @@ focosEnCampos()
 document.addEventListener('submit', (e) => {
     e.preventDefault() //Previne que suceda el evento por defecto ()
     guardarDatosDeUsr()
-    //alert("Gracias por su compra")
+    //¿Esto lo permite sin existir porque no se está ocupando?
 })

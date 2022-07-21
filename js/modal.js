@@ -1,3 +1,6 @@
+import { swa } from "./proteinas.js";
+//
+
 const modalContenedor = document.querySelector('.modal-container'); //El punto . es por el QueryS
 const abrirCarrito = document.getElementById('open')
 const cerrarCarrito = document.getElementById('cerrar')
@@ -24,7 +27,7 @@ abrirFormulario.addEventListener('click',()=>{
 enviar.addEventListener('click',()=>{
     modalContenedor2.classList.toggle('modal-active2')
     modalContenedor.classList.toggle('modal-active')
-    //swa(`Gracias por su compra`, "DodgerBlue", 1000, 'success')
+    swa(`Gracias por su compra`, "DodgerBlue", 1000, 'success')
 })
 
 cancelar.addEventListener('click',()=>{

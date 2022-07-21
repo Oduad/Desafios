@@ -88,7 +88,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../paginas/calculadora.html"> <ion-icon name="calculator"></ion-icon> Calculadora</a>
+                <a class="nav-link" href="../paginas/calculadora.html"> <ion-icon name="calculator"></ion-icon>IMC Calculator</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contact</a>
@@ -103,41 +103,21 @@
 
   <main>
     <div class="div1 container-fluid h1_index text-center">
-      <h1 class="container-fluid" id="titulo">Women routines</h1><br><br>
-      <img class="imagenArriba responsive-img img-thumbnail" src="../img/lidia3.jpg" alt="" width="70%">
+      <h1 class="container-fluid" id="titulo">Calculator</h1><br><br>
+      <img class="imagenArriba responsive-img img-thumbnail" src="../img/lidia11.jpg" alt="" width="70%">
     </div>
 
-    <br>
-
-    <!-- <div class="d-flex">
-        <div id="sidebar-container" class="bg-primary">
-            <div class="logo">
-                <h4 class="text-light font-weight-bold" id="titulo">Odi's Suplements</h4>
-            </div>
-            <div class="menu">
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-home mr-1"></i> Home</a>
-                <a href="#"class="d-block text-light p-3 mr-9 lead"> <i class="icon ion-logo-javascript"></i>  Mass winners</a>
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-md-school"></i> Proteins</a>
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-flask"></i> Snacks</a>
-                <a href="#"class="d-block text-light p-3 mr-2 lead"> <i class="icon ion-ios-rocket"></i> Clothes</a>
-            </div>
-        </div>
-    </div> -->
-
-    <div>
-      <h2 class="text-center">Galeries</h2>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-4 text-center">
-          <h3>Fitness girls</h3>
-          <img class="responsive-img img-thumbnail" src="../img/fitnesgirls.jpg" width="96%" alt="">
-          <button type="button" class="btn btn-primary btnGalery">See galery</button>
-        </div>
-        <div class="col-md-4 text-center">
-          <h3>Weightlifters</h3>
-          <img class="responsive-img img-thumbnail" src="../img/lidia6.jpg" width="94%" alt="">
-          <button type="button" class="btn btn-primary btnGalery">See galery</button>
-        </div>
-    </div>
+    <form action="" class="calculadora">
+        <div id="calcu">
+            <p>Enter your data to calculate your IMC:</p><br> 
+              <input type="text" id="inputName" placeholder="Name "><br><br>
+              <input type="text" id="inputHeight" placeholder="Height in cm"><br><br>
+              <input type="text"  id="inputWeight" placeholder="Weight in kg"><br><br>
+              <button id="calcular" type="button" class="btn btn-success ">Calcular</button>
+              
+              <br><br>
+          </div>
+    </form>
 
   </main>
 
@@ -167,19 +147,6 @@
   </footer>
   <!--Fin del footer-->
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS 
-  <script src="../js/entrega.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script -->
-
     <!--Ionic-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
 
@@ -193,6 +160,8 @@
 
     <!-- Inicializador de AOS -->
     <script> AOS.init();</script>
+
+    <script src="../jsCalcu/calculadora.js" type="module"></script>
 
 </body>
 

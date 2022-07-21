@@ -6,8 +6,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-
   <meta charset="UTF-8">
   <!--La etiqueta meta es para responsive-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +30,6 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/luxon@1.22.2/build/global/luxon.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -106,8 +102,8 @@
               </li-->
               <li class="nav-item">
                 <button class="nav-link text-body btn btn-light boton-eliminar" id="open"> Cart <ion-icon name="cart">
-                  </ion-icon> <span
-                  id="contador-carrito">0</span></button>
+                  </ion-icon><span
+                  id="contador-carrito"> </span></button>
               </li>
 
             </ul>
@@ -122,11 +118,12 @@
   <main id="proteinas-contenedor">
 
     <div class="text-center">
-      <h1 id="titulo">PROTEÍNAS</h1><br>
+      <h1 id="titulo">PROTEIN</h1><br>
       <img class="img-fluid img-thumbnail imagenArriba" src="../img/suplement.jpg" alt="" width="70%">
+      <br><br>
+      <h2>AVAILABLE PRODUCTS</h2>
     </div>
     
-
     <!--div class="col s4 center" id="animacion">
       <Preloader aquí
       col s4 altera el espacio a la izquierda>
@@ -167,12 +164,19 @@
 
         <br><br>
         <div id="carrito-contenedor">
-
+ 
         </div>
         <!--button id="cerrar">Cerrar</button-->
+
+        <div id="total">
+          <h5>El total a pagar es</h5>
+          <input id="totalP" type="text" value="$0">
+        </div>
+
         <button id="cerrar" type="button" class="btn btn-success btn-carrito"><ion-icon name="close-circle"></ion-icon> Close</button>
         <!--button id="comprar">Comprar</button-->
-        <button id="comprar" type="button" class="btn btn-primary btn-carrito"> <ion-icon name="card"></ion-icon> Buy</button>
+        <button id="comprar" type="button" class="btn btn-primary btn-carrito"> <ion-icon name="card"></ion-icon> Buy</button><br>
+         
       </div>
     </div>
 
@@ -190,7 +194,6 @@
             <input type="submit" class="btn orange white-text" id="submit" value="Enviar">
         </div>
         <!--button id="cerrar">Cerrar</button-->
-.
         <button id="enviar" type="button" class="btn btn-success btn-carrito"> <ion-icon name="card"></ion-icon> Send</button>
         <button id="cancelar" type="button" class="btn btn-success btn-carrito">Cancel</button>
       </div>
@@ -229,7 +232,7 @@
   <script src="../js/proteinas.js" type="module"></script>
   <script src="../js/modal.js" type="module"></script>
   <script src="../js/mainForm.js" type="module"></script>
-  <!--script src="../js/finalizar.js" type="module"></script-->
+
   <!-- La línea de arriba hay que ponerlo en un achivo aparte-->
 
   <!--Parte de JavaScrip -->
@@ -239,7 +242,6 @@
 
     <!--Ionic--> 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
 
   <!-- Parte de JavaScrip de AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

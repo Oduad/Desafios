@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "nombre": "Creatina 1",
+        "poster": "../img/creatina1.jpg",
+        "precio": "500",
+        "cantidad": "5 lb",
+        "marca": "Marca 1",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 2,
+        "nombre": "Creatina 2",
+        "poster": "../img/creatina2.jpg",
+        "precio": "450",
+        "cantidad": "1.8 lb",
+        "marca": "Marca 2",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 3,
+        "nombre": "Creatina 3",
+        "poster": "../img/creatina3.jpg",
+        "precio": "550",
+        "cantidad": "1.8 lb",
+        "marca": "Marca 3",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 4,
+        "nombre": "Creatina 4",
+        "poster": "../img/creatina4.jpg",
+        "precio": "500",
+        "cantidad": "2 lb",
+        "marca": "Marca 4",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 5,
+        "nombre": "Creatina 5",
+        "poster": "../img/creatina4.jpg",
+        "precio": "500",
+        "cantidad": "2 lb",
+        "marca": "Marca 5",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    },
+    {
+        "id": 4,
+        "nombre": "Creatina 6",
+        "poster": "../img/creatina4.jpg",
+        "precio": "500",
+        "cantidad": "2 lb",
+        "marca": "Marca 4",
+        "categoria": "Creatina",
+        "pais": "EUA"
+    }
+]

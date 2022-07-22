@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-y:visible;
+    overflow-y: visible;
 
     /*overflow-y:auto;
     overflow-x: auto;*/
@@ -72,63 +72,72 @@ header {
 h1 {
     font-weight: bold;
     animation: tituloHome 3s;
-  }
-  
-  @keyframes tituloHome {
-    0% {
-      transform: translateX(1000px);
-      opacity: 0;
-    }
-    30% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    60% {
-      transform: scale(1.1);
-      opacity: 0.5;
-    }
-    90% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
+}
 
-  /*Misión, visión, valores DESKTOP*/
-  .img_mvv {
+@keyframes tituloHome {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+
+    90% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*Misión, visión, valores DESKTOP*/
+.img_mvv {
     max-width: 60px;
-  }
-  
-  .img_mvv:hover {
+}
+
+.img_mvv:hover {
     cursor: pointer;
     max-width: 70px;
-  }
-  
-  #mission, #vission,
-  #values {
+}
+
+#mission,
+#vission,
+#values {
     color: #1C94E5;
     /*Abajo se usa una variable*/
     font-size: 22px;
-  }
-  
-  .caja1_index, .caja2_index,
-  .caja3_index {
+}
+
+.caja1_index,
+.caja2_index,
+.caja3_index {
     /*Abajo se aplica el extend*/
     font-size: 15px;
     text-align: center;
     padding-right: 10px;
     padding-left: 10px;
-  }
-  
+}
 
-.div-video,
+
 .div1 {
     padding: 40px;
 }
 
+/*.div-video {
+    height: 70vh;
+    padding: 20px;
+}
+
 .video_index {
-    max-width: 80vw;
-    min-height: 85vh;
-  }
+    width: 50vw;
+    height: 100vh;
+  }*/
 
 .form {
     width: 100%;
@@ -153,29 +162,32 @@ body {
     justify-content: center;
 }
 
- .elementoSize {
+.elementoSize {
     text-align: center;
     animation: imagenIndex 3s;
-  }
-  
-  @keyframes imagenIndex {
+}
+
+@keyframes imagenIndex {
     0% {
-      transform: translateY(500px);
-      opacity: 0;
+        transform: translateY(500px);
+        opacity: 0;
     }
+
     30% {
-      transform: translateY(0);
-      opacity: 0.3;
+        transform: translateY(0);
+        opacity: 0.3;
     }
+
     60% {
-      transform: scale(1.1);
-      opacity: 0.6;
+        transform: scale(1.1);
+        opacity: 0.6;
     }
+
     90% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
-  }
+}
 
 a:hover {
     text-decoration: none;
@@ -218,26 +230,26 @@ a:hover {
 
 
 /*Suplemento/Proteínas contenedor DESKTOP*/
-#proteinas-contenedor{
+#proteinas-contenedor {
     display: grid;
     margin: 50px auto;
     display: flex;
-    justify-content: space-evenly ;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.card .card-image .card-title{
+.card .card-image .card-title {
     display: inline-block;
     color: dodgerblue;
     position: unset;
     text-align: center;
 }
 
-.card{
+.card {
     margin: 28px;
 }
 
-.modal-container{
+.modal-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,13 +263,13 @@ a:hover {
     z-index: 10;
 }
 
-.modal-active{
+.modal-active {
     opacity: 1;
     visibility: visible;
     z-index: 5;
 }
 
-.modal-carrito{
+.modal-carrito {
     width: 30rem;
     height: 20rem;
     background-color: cornflowerblue;
@@ -265,7 +277,7 @@ a:hover {
     text-align: center;
 }
 
-.productoEnCarrito{
+.productoEnCarrito {
     border-left: 5px solid lightblue;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
@@ -275,7 +287,7 @@ a:hover {
     justify-content: space-between;
 }
 
-.btn-carrito{
+.btn-carrito {
     margin: 15px;
 }
 
@@ -283,7 +295,7 @@ a:hover {
     background-color: aquamarine !important;
 }
 
-.modal-container2{
+.modal-container2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,13 +309,13 @@ a:hover {
     z-index: 100;
 }
 
-.modal-active2{
+.modal-active2 {
     opacity: 1;
     visibility: visible;
     z-index: 5;
 }
 
-.modal-carrito2{
+.modal-carrito2 {
     width: 30rem;
     height: 30rem;
     background-color: #1C94E5;
@@ -311,7 +323,7 @@ a:hover {
     text-align: center;
 }
 
-#creatinas-contenedor{
+#creatinas-contenedor {
     display: grid;
     margin: 40px auto;
     display: flex;
@@ -320,7 +332,7 @@ a:hover {
 }
 
 /*Rutinas DESKTOP*/
-.btnGalery{
+.btnGalery {
     margin: 15px;
 }
 
@@ -336,10 +348,10 @@ a:hover {
 }
 
 .div-contact {
-    padding: 50px;
+    padding: 10px;
 }
 
-.circleL {
+/*.circleL {
     padding: 50px;
     margin-right: 80px;
     width: 10px;
@@ -420,7 +432,54 @@ a:hover {
     animation-name: cambiarColorR;
     animation-duration: 8s;
     animation-iteration-count: infinite;
-}
+}*/
+
+/*@keyframes cambiarColorR {
+    0% {
+        background-color: coral;
+        transform: translateY(-150px) scale(0.4);
+    }
+    10% {
+        background-color: violet;
+        transform: translateY(-80px) scale(0.6);
+    }
+    20% {
+        background-color: greenyellow;
+        transform: translateY(-10px) scale(0.8);
+    }
+    30% {
+        background-color: cornflowerblue;
+        transform: translateY(60px) scale(1);
+    }
+    40% {
+        background-color: lavender;
+        transform: translateY(120px) scale(1.2);
+    }
+    50% {
+        background-color: tomato;
+        transform: translateY(160px) scale(1.4);
+    }
+    60% {
+        background-color: hotpink;
+        transform: translateY(100px) scale(1.2);
+    }
+    70% {
+        background-color: lightgreen;
+        transform: translateY(40px) scale(1);
+    }
+    80% {
+        background-color: lightgoldenrodyellow;
+        transform: translateY(-20px) scale(0.8);
+    }
+    90% {
+        background-color: royalblue;
+        transform: translateY(-80px) scale(0.6);
+    }
+    100% {
+        background-color: chartreuse;
+        transform: translateY(-140px) scale(0.4);
+    }
+}*/
 
 /*@keyframes cambiarColorR {
     0% {
@@ -479,103 +538,33 @@ a:hover {
     }
 }*/
 
-@keyframes cambiarColorR {
-    0% {
-        background-color: coral;
-        transform: translateY(-150px) scale(0.4);
-    }
-
-    10% {
-        background-color: violet;
-        transform: translateY(-80px) scale(0.6);
-    }
-
-    20% {
-        background-color: greenyellow;
-        transform: translateY(-10px) scale(0.8);
-    }
-
-    30% {
-        background-color: cornflowerblue;
-        transform: translateY(60px) scale(1);
-    }
-
-    40% {
-        background-color: lavender;
-        transform: translateY(120px) scale(1.2);
-    }
-
-    50% {
-        background-color: tomato;
-        transform: translateY(160px) scale(1.4);
-    }
-
-    60% {
-        background-color: hotpink;
-        transform: translateY(100px) scale(1.2);
-    }
-
-    70% {
-        background-color: lightgreen;
-        transform: translateY(40px) scale(1);
-    }
-
-    80% {
-        background-color: lightgoldenrodyellow;
-        transform: translateY(-20px) scale(0.8);
-    }
-
-    90% {
-        background-color: royalblue;
-        transform: translateY(-80px) scale(0.6);
-    }
-
-    100% {
-        background-color: chartreuse;
-        transform: translateY(-140px) scale(0.4);
-    }
-}
-
 .cajasContacto {
     color: #52B6F9;
     /*Aquí se usa una variable*/
     padding: 4px;
     /*background-image: radial-gradient(white 15%, #D6EAF8 85%);
     /*Aquí se usan variables*/
-  }
-  
-  .card {
-    animation-name: cardMovimiento;
-    animation-duration: 3s;
-  }
-  
-  @keyframes cardMovimiento {
-    from {
-      transform: translateX(1000px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  .card-title, .card-text {
+    text-align: center;
+}
+
+.card-title,
+.card-text {
     color: #0598FE;
     /*Abajo se usa un mixin*/
     text-align: center;
     /*Abajo se usa un mixin*/
     font-size: 15px;
     font-weight: 500;
-  }
-  
-  .card-text {
+}
+
+.card-text {
     /*Abajo se usa un mixin*/
     font-size: 14px;
-  }
+}
 
-  iframe {
-    min-width: 550px;
-    max-height: 300px;
+iframe {
+    min-width: 850px;
+    min-height: 500px;
 }
 
 /*Elementos del footer en DESKTOP*/
@@ -587,15 +576,14 @@ a:hover {
     max-width: 120px;
 }
 
-
 /*ABAJO ES PARA TABLET TABLET*/
 @media (min-width: 577px) and (max-width: 768px) {
 
     /*INDEX*/
-    .video_index {
-        max-width: 72vw;
+    /*.video_index {
+        max-width: 82vw;
         min-height: 50vh;
-      }
+    }*/
 
     #titulo {
         font-size: 30px;
@@ -606,7 +594,7 @@ a:hover {
     }
 
     /*CONTACT*/
-    .circleR {
+    /*.circleR {
         padding: 30px;
         margin-left: 80px;
         width: 10px;
@@ -618,28 +606,34 @@ a:hover {
         margin-right: 80px;
         width: 10px;
         height: 10px;
-    }
+    }*/
 
     /*CONTACTO*/
-    .card-title, .card-text {
+    .card-title,
+    .card-text {
         font-size: 14px;
         font-weight: 450;
-      }
-
-      iframe {
-        max-width: 300px;
-        max-height: 200px;
     }
+
+    iframe {
+        min-width: 80vw;
+        min-height: 50vh;
+      }
 
 }
 
 /*CELPHONE*/
 @media (max-width: 576px) {
-
     /*INDEX*/
+
+    /*.div-video {
+        height: 70vh;
+        padding: 10px;
+    }
+    
     .video_index {
-        max-width: 65vw;
-        min-height: 40vh;
+        width: 20px;
+        height: 150vh;
       }
 
     #titulo {
@@ -651,12 +645,17 @@ a:hover {
     }
 
     /*CONTACT*/
-    iframe {
-        max-width: 150px;
-        max-height: 100px;
+
+    #titulo {
+        font-size: 25px;
     }
 
-    .circleR {
+    iframe {
+        min-width: 80vw;
+        min-height: 50vh;
+      }
+
+    /*.circleR {
         padding: 10px;
         margin-left: 260px;
         width: 30px;
@@ -784,11 +783,12 @@ a:hover {
             background-color: chartreuse;
             transform: translateY(-200px) scale(0.4);
         }
-    }
+    }*/
 
-    .card-title, .card-text {
+    .card-title,
+    .card-text {
         font-size: 13px;
         font-weight: 400;
-      }
+    }
 
 }

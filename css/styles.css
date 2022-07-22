@@ -153,7 +153,7 @@ body {
     justify-content: center;
 }
 
-.imagenArriba {
+ .elementoSize {
     text-align: center;
     animation: imagenIndex 3s;
   }
@@ -536,6 +536,48 @@ a:hover {
     }
 }
 
+.cajasContacto {
+    color: #52B6F9;
+    /*Aquí se usa una variable*/
+    padding: 4px;
+    /*background-image: radial-gradient(white 15%, #D6EAF8 85%);
+    /*Aquí se usan variables*/
+  }
+  
+  .card {
+    animation-name: cardMovimiento;
+    animation-duration: 3s;
+  }
+  
+  @keyframes cardMovimiento {
+    from {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .card-title, .card-text {
+    color: #0598FE;
+    /*Abajo se usa un mixin*/
+    text-align: center;
+    /*Abajo se usa un mixin*/
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .card-text {
+    /*Abajo se usa un mixin*/
+    font-size: 14px;
+  }
+
+  iframe {
+    min-width: 550px;
+    max-height: 300px;
+}
+
 /*Elementos del footer en DESKTOP*/
 .col-footer {
     font-size: 15px;
@@ -545,14 +587,15 @@ a:hover {
     max-width: 120px;
 }
 
-/*TABLET*/
 
-.video_index {
-    max-width: 72vw;
-    min-height: 50vh;
-  }
-
+/*ABAJO ES PARA TABLET TABLET*/
 @media (min-width: 577px) and (max-width: 768px) {
+
+    /*INDEX*/
+    .video_index {
+        max-width: 72vw;
+        min-height: 50vh;
+      }
 
     #titulo {
         font-size: 30px;
@@ -562,6 +605,7 @@ a:hover {
         font-size: 13px;
     }
 
+    /*CONTACT*/
     .circleR {
         padding: 30px;
         margin-left: 80px;
@@ -575,16 +619,28 @@ a:hover {
         width: 10px;
         height: 10px;
     }
+
+    /*CONTACTO*/
+    .card-title, .card-text {
+        font-size: 14px;
+        font-weight: 450;
+      }
+
+      iframe {
+        max-width: 300px;
+        max-height: 200px;
+    }
+
 }
 
 /*CELPHONE*/
-
-.video_index {
-    max-width: 65vw;
-    min-height: 40vh;
-  }
-
 @media (max-width: 576px) {
+
+    /*INDEX*/
+    .video_index {
+        max-width: 65vw;
+        min-height: 40vh;
+      }
 
     #titulo {
         font-size: 25px;
@@ -594,6 +650,7 @@ a:hover {
         font-size: 11px;
     }
 
+    /*CONTACT*/
     iframe {
         max-width: 150px;
         max-height: 100px;
@@ -728,5 +785,10 @@ a:hover {
             transform: translateY(-200px) scale(0.4);
         }
     }
+
+    .card-title, .card-text {
+        font-size: 13px;
+        font-weight: 400;
+      }
 
 }

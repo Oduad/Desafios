@@ -24,13 +24,13 @@ boton.addEventListener('click', () => {
     if (imc < 15) {
         caso = 'Delgadez muy Severa'
     }
-    if (15 <= imc < 15.9) {
+    if (15 <= imc && imc < 15.9) {
         caso = 'Delgadez Severa'
     }
-    if (15.9 <= imc < 18.4) {
+    if (15.9 <= imc && imc< 18.4) {
         caso = 'Delgadez'
     }
-    if (18.4 <= imc < 24.9) {
+    if (18.4 <= imc && imc< 24.9) {
         caso = 'Peso Saludable'
     }
     else caso = 'Sobrepeso'

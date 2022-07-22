@@ -104,7 +104,7 @@ const obtenerContenido = (URL) => {
 document.addEventListener("DOMContentLoaded",()=>{
     setTimeout(()=>{
         obtenerContenido(URL)
-    },2000)
+    },500)
 })
 
 /*Parte de Storage*/

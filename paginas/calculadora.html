@@ -27,6 +27,8 @@
     <!--Librería para animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
 <body>
@@ -91,6 +93,9 @@
                 <a class="nav-link" href="../paginas/calculadora.html"> <ion-icon name="calculator"></ion-icon>IMC Calculator</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="../paginas/calculadora.html"> <ion-icon name="calculator"></ion-icon> Calculadora</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contact</a>
               </li>
             </ul>
@@ -103,15 +108,16 @@
 
   <main>
     <div class="div1 container-fluid h1_index text-center">
-      <h1 class="container-fluid" id="titulo">Calculator</h1><br><br>
-      <img class="imagenArriba responsive-img img-thumbnail" src="../img/lidia11.jpg" alt="" width="70%">
+      <h1 class="container-fluid" id="titulo">IMC Calculator</h1><br><br>
+      <img class="elementoSize responsive-img img-thumbnail" src="../img/lidia11.jpg" alt="" width="70%">
     </div>
 
-    <form action="" class="calculadora">
+    <form action="" class="calculadora elementoSize">
         <div id="calcu">
-            <p>Enter your data to calculate your IMC:</p><br> 
+            <p>Enter your data to calculate your IMC</p>
+            <p>Indice de Masa Corporal</p> 
               <input type="text" id="inputName" placeholder="Name "><br><br>
-              <input type="text" id="inputHeight" placeholder="Height in cm"><br><br>
+              <input type="text" id="inputHeight" placeholder="Height in m"><br><br>
               <input type="text"  id="inputWeight" placeholder="Weight in kg"><br><br>
               <button id="calcular" type="button" class="btn btn-success ">Calcular</button>
               

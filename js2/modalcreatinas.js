@@ -1,3 +1,5 @@
+import { swa } from "./creatinas.js";
+
 const modalContenedor = document.querySelector('.modal-container'); //El punto . es por el QueryS
 const abrirCarrito = document.getElementById('open')
 const cerrarCarrito = document.getElementById('cerrar')
@@ -32,3 +34,16 @@ cancelar.addEventListener('click',()=>{
 }) 
 
 //¿Se viene encapsulamiento y qué más en JS?
+
+const profesor = document.getElementById('profesor');
+
+profesor.addEventListener('click', () => {
+    swa(`Agradecimientos al profesor Fernando Luna por su entrega y dedicación en cada clase.`, "#b3ffb3", 4000, 'success')
+    
+})
+
+const tutor = document.getElementById('tutor');
+
+tutor.addEventListener('click', () => {
+    swa(`Agradecimientos al tutor Julio César Caro Cota por su tiempo en cada una de las dudas.`, "#b3ffb3", 4000, 'success')
+})

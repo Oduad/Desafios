@@ -16,6 +16,7 @@ const boton = document.getElementById('calcular');
 
 boton.addEventListener('click', () => {
     let nombre = document.getElementById('inputName').value;
+
     let masa = Number(document.getElementById("inputWeight").value);
     let altura = Number(document.getElementById('inputHeight').value);
     let imc = (masa / (altura * altura)).toFixed(2);
@@ -24,16 +25,39 @@ boton.addEventListener('click', () => {
     if (imc < 15) {
         caso = 'Delgadez muy Severa'
     }
-    if (15 <= imc && imc < 15.9) {
+    else if (15 <= imc && imc < 15.9) {
         caso = 'Delgadez Severa'
     }
-    if (15.9 <= imc && imc< 18.4) {
+    else if (15.9 <= imc && imc < 18.4) {
         caso = 'Delgadez'
     }
-    if (18.4 <= imc && imc< 24.9) {
+    else if (18.4 <= imc && imc < 24.9) {
         caso = 'Peso Saludable'
     }
-    else caso = 'Sobrepeso'
+    else if (24.9 <= imc && imc < 26.9) {
+        caso = 'Sobrepeso Grado 1'
+    }
+    else if (26.9 <= imc && imc < 29.9) {
+        caso = 'Sobrepeso Grado 2'
+    }
+    else if (29.9 <= imc && imc < 34.9) {
+        caso = 'Obesidad Grado 1'
+    }
+    else if (34.9 <= imc && imc < 39.9) {
+        caso = 'Obesidad Grado 2'
+    }
+    else if (39.9 <= imc && imc < 49.9) {
+        caso = 'Obesidad Mórbida'
+    } 
 
-    swa(`${nombre}\n Tu IMC es ${imc} \n Estás en ${caso}`, "DodgerBlue", 3000, 'success')
+    if(altura>2.53 || altura<0.73){
+        swa(`Nadie en la tierra tiene esa estatura. Ingrésala nuevamente.`, "DodgerBlue", 4000, 'success')
+    }
+    else if(masa>300){
+        swa(`Nadie en la tierra tiene esa masa. Ingrésala nuevamente.`, "DodgerBlue", 4000, 'success')
+    }
+    else if(nombre == "Xochitl" || nombre == "xochitl"){
+        swa(`${nombre}, eres especial para Oduad\n Tu IMC es ${imc} \n Estás en ${caso}`, "DodgerBlue", 4000, 'success')
+    }else{
+    swa(`${nombre}\n Tu IMC es ${imc} \n Estás en ${caso}`, "DodgerBlue", 3000, 'success')}
 })

@@ -38,25 +38,5 @@
         "marca": "Marca 4",
         "categoria": "Creatina",
         "pais": "EUA"
-    },
-    {
-        "id": 5,
-        "nombre": "Creatina 5",
-        "poster": "../img/creatina4.jpg",
-        "precio": "500",
-        "cantidad": "2 lb",
-        "marca": "Marca 5",
-        "categoria": "Creatina",
-        "pais": "EUA"
-    },
-    {
-        "id": 4,
-        "nombre": "Creatina 6",
-        "poster": "../img/creatina4.jpg",
-        "precio": "500",
-        "cantidad": "2 lb",
-        "marca": "Marca 4",
-        "categoria": "Creatina",
-        "pais": "EUA"
     }
 ]

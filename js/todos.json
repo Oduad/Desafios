@@ -118,14 +118,5 @@
         "marca": "Marca 12",
         "categoria": "Proteína",
         "pais": "EUA"
-    },{
-        "id": 13,
-        "nombre": "Master",
-        "poster": "../img/prote11.jpg",
-        "precio": "1100",
-        "cantidad": "5 lb",
-        "marca": "Marca 13",
-        "categoria": "Proteína",
-        "pais": "EUA"
     }
 ]

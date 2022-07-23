@@ -126,7 +126,7 @@ h1 {
 
 
 .div1 {
-    padding: 40px;
+    padding: 20px;
 }
 
 /*.div-video {
@@ -141,6 +141,11 @@ h1 {
 
   .arribaP{
     text-align: center;
+  }
+
+  .botones{
+    text-align: center;
+    align-items: center;
   }
 
 .form {
@@ -234,7 +239,7 @@ a:hover {
 
 
 /*Suplemento/Proteínas contenedor DESKTOP*/
-#proteinas-contenedor {
+#proteinas-contenedor, #ropaf-contenedor, #ropam-contenedor{
     display: grid;
     margin: 50px auto;
     display: flex;
@@ -242,11 +247,13 @@ a:hover {
     flex-wrap: wrap;
 }
 
-.card .card-image .card-title {
+.card, .card-image, .card-title {
     display: inline-block;
     color: dodgerblue;
     position: unset;
     text-align: center;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .card {
@@ -794,6 +801,10 @@ iframe {
     .card-text {
         font-size: 13px;
         font-weight: 400;
+    }
+
+    .col-footer {
+        font-size: 13px;
     }
 
 }

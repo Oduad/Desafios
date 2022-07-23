@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "nombre": "Prenda 1",
+        "poster": "../img/ropaf1.jpg",
+        "precio": "980",
+        "cantidad": "5 lb",
+        "marca": "Marca 1",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 2,
+        "nombre": "Prenda 2",
+        "poster": "../img/ropaf2.jpg",
+        "precio": "1100",
+        "cantidad": "4 lb",
+        "marca": "Marca 2",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 3,
+        "nombre": "Prenda 3",
+        "poster": "../img/ropaf3.jpg",
+        "precio": "1250",
+        "cantidad": "5.2 lb",
+        "marca": "Marca 3",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 4,
+        "nombre": "Prenda 4",
+        "poster": "../img/ropaf4.jpg",
+        "precio": "1650",
+        "cantidad": "4 lb",
+        "marca": "Marca 4",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 5,
+        "nombre": "Prenda 5",
+        "poster": "../img/ropaf5.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 5",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 6,
+        "nombre": "Prenda 6",
+        "poster": "../img/ropaf6.jpg",
+        "precio": "1500",
+        "cantidad": "5 lb",
+        "marca": "Marca 6",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 7,
+        "nombre": "Prenda 7",
+        "poster": "../img/ropaf7.jpg",
+        "precio": "1300",
+        "cantidad": "5 lb",
+        "marca": "Marca 7",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 8,
+        "nombre": "Prenda 8",
+        "poster": "../img/ropaf8.jpg",
+        "precio": "1100",
+        "cantidad": "5 lb",
+        "marca": "Marca 8",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 9,
+        "nombre": "Prenda 9",
+        "poster": "../img/ropaf9.jpg",
+        "precio": "1000",
+        "cantidad": "5 lb",
+        "marca": "Marca 9",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 10,
+        "nombre": "Prenda 10",
+        "poster": "../img/ropaf10.jpg",
+        "precio": "1200",
+        "cantidad": "5 lb",
+        "marca": "Marca 10",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 11,
+        "nombre": "Prenda 11",
+        "poster": "../img/ropaf11.jpg",
+        "precio": "1050",
+        "cantidad": "5 lb",
+        "marca": "Marca 11",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    },
+    {
+        "id": 12,
+        "nombre": "Prenda 12",
+        "poster": "../img/ropaf12.jpg",
+        "precio": "1200",
+        "cantidad": "5 lb",
+        "marca": "Marca 12",
+        "categoria": "Ropa",
+        "pais": "EUA"
+    }
+]

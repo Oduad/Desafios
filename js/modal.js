@@ -27,7 +27,7 @@ abrirFormulario.addEventListener('click',()=>{
 enviar.addEventListener('click',()=>{
     modalContenedor2.classList.toggle('modal-active2')
     modalContenedor.classList.toggle('modal-active')
-    swa(`Gracias por su compra`, "DodgerBlue", 1000, 'success')
+    swa(`Muchas gracias por su compra`, "DodgerBlue", 1000, 'success')
 })
 
 cancelar.addEventListener('click',()=>{
@@ -35,3 +35,16 @@ cancelar.addEventListener('click',()=>{
 }) 
 
 //¿Se viene encapsulamiento y qué más en JS?
+
+const profesor = document.getElementById('profesor');
+
+profesor.addEventListener('click', () => {
+    swa(`Agradecimientos al profesor Fernando Luna por su entrega y dedicación en cada clase.`, "#eeccff", 4000, 'success')
+    
+})
+
+const tutor = document.getElementById('tutor');
+
+tutor.addEventListener('click', () => {
+    swa(`Agradecimientos al tutor Julio César Caro Cota por su tiempo en cada una de las dudas.`, "#eeccff", 4000, 'success')
+})

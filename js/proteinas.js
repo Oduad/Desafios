@@ -8,7 +8,7 @@ const swa = (mensaje, bgColor, tiempo, icono, color) => {
         timer: tiempo || 3000,
         timerProgressBar: true,
         background: bgColor || 'white',
-        color: color || '#ffffff'
+        color: color || 'black'
     })
 }//Falta arreglar el Swal    
 
@@ -88,7 +88,7 @@ const obtenerContenido = (URL) => {
                     pagoF.value = "$"+pagoTotal;
                     carritoIndex2(id);
                     guardarDatos2(contenido);
-                    swa(`${nombre} agregado al carrito y llevas ${pagoTotal} `, "DodgerBlue", 1000, 'success')
+                    swa(`${nombre} agregado al carrito y llevas $${pagoTotal} `, "DodgerBlue", 1000, 'success')
                 })
             }
                 swa(`Se han cargado los productos disponibles`, "DodgerBlue", 1000, 'success')
@@ -141,7 +141,7 @@ const carritoIndex2 = (productoId) => {
                 let div = document.createElement('div');
                 div.classList.add('productoEnCarrito');
                 div.innerHTML += `<p>${producto.nombre}</p>
-                <p>Precio: ${producto.precio}</p>
+                <p>Precio: $${producto.precio}</p>
                 <button id="eliminar${producto.id}" class="btn btn-light boton-eliminar" type="button"><ion-icon name="trash"></ion-icon></button>`
                 contenedorCarrito.appendChild(div)
 

@@ -63,9 +63,15 @@
                   <i class="icon ion-md-flask"></i> Suplements
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item active" href="../paginas/suplementsP.html"><ion-icon name="flask"></ion-icon> Proteins</a></li>
-                  <li><a class="dropdown-item" href="../paginas/suplementsC.html"><ion-icon name="flash"></ion-icon> Creatine</a></li>
-                  <li><a class="dropdown-item" href="../paginas/agregarProducto.html"><ion-icon name="add-circle"></ion-icon> Add product</a></li>
+                  <li><a class="dropdown-item active" href="../paginas/suplementsP.html">
+                      <ion-icon name="flask"></ion-icon> Proteins
+                    </a></li>
+                  <li><a class="dropdown-item" href="../paginas/suplementsC.html">
+                      <ion-icon name="flash"></ion-icon> Creatine
+                    </a></li>
+                  <li><a class="dropdown-item" href="../paginas/agregarProducto.html">
+                      <ion-icon name="add-circle"></ion-icon> Add product
+                    </a></li>
                   <!--li><a class="dropdown-item" href="../paginas/suplements.html">Snacks</a></li>
                   <li><a class="dropdown-item" href="../paginas/suplements.html">Others</a></li-->
                 </ul>
@@ -79,8 +85,12 @@
                   <i class="icon ion-md-shirt"></i> Clothes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="../paginas/womanClothes.html"> <ion-icon name="woman"></ion-icon>Women</a></li>
-                  <li><a class="dropdown-item" href="../paginas/menClothes.html"><ion-icon name="man"></ion-icon>Men</a></li>
+                  <li><a class="dropdown-item" href="../paginas/womanClothes.html">
+                      <ion-icon name="woman"></ion-icon>Women
+                    </a></li>
+                  <li><a class="dropdown-item" href="../paginas/menClothes.html">
+                      <ion-icon name="man"></ion-icon>Men
+                    </a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -89,12 +99,18 @@
                   <i class="icon ion-md-fitness"></i> Routines
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="../paginas/womanroutine.html"> <ion-icon name="woman"></ion-icon> Women</a></li>
-                  <li><a class="dropdown-item" href="../paginas/menroutine.html"> <ion-icon name="man"></ion-icon> Men</a></li>
+                  <li><a class="dropdown-item" href="../paginas/womanroutine.html">
+                      <ion-icon name="woman"></ion-icon> Women
+                    </a></li>
+                  <li><a class="dropdown-item" href="../paginas/menroutine.html">
+                      <ion-icon name="man"></ion-icon> Men
+                    </a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../paginas/calculadora.html"> <ion-icon name="calculator"></ion-icon> Calculadora</a>
+                <a class="nav-link" href="../paginas/calculadora.html">
+                  <ion-icon name="calculator"></ion-icon> Calculadora
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../paginas/contact.html"> <i class="icon ion-logo-whatsapp"></i> Contact</a>
@@ -105,8 +121,7 @@
               </li-->
               <li class="nav-item">
                 <button class="nav-link text-body btn btn-light boton-eliminar" id="open"> Cart <ion-icon name="cart">
-                  </ion-icon><span
-                  id="contador-carrito"> </span></button>
+                  </ion-icon><span id="contador-carrito"> </span></button>
               </li>
 
             </ul>
@@ -120,13 +135,18 @@
   <!--Inicio del main-->
   <main id="proteinas-contenedor">
 
-    <div class="text-center">
+    <div class="arribaP">
       <h1 id="titulo">PROTEIN</h1><br>
-      <img class="img-fluid img-thumbnail elementoSize" src="../img/suplement.jpg" alt="" width="70%">
-      <br><br>
+      <div class="arribaP">
+        <button class="nav-link text-body btn btn-light" id=""> Profesor</button>
+        <button class="nav-link text-body btn btn-light" id=""> Tutor</button>
+        <br><br>
+        <img class="img-fluid img-thumbnail elementoSize" src="../img/suplement.jpg" alt="" width="70%">
+        <br><br>
+      </div>
       <h2 class="elementoSize">AVAILABLE PRODUCTS</h2>
     </div>
-    
+
     <!--div class="col s4 center" id="animacion">
       <Preloader aquí
       col s4 altera el espacio a la izquierda>
@@ -139,16 +159,18 @@
 
     <div id="cargando" class="center">
       <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue-only">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div><div class="gap-patch">
-              <div class="circle"></div>
-            </div><div class="circle-clipper right">
-              <div class="circle"></div>
-            </div>
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
           </div>
         </div>
+      </div>
       <div class="progress">
         <div class="indeterminate"></div>
       </div>
@@ -163,11 +185,12 @@
     <div class="modal-container" id="modal_container">
       <div class="modal-carrito">
         <br>
-        <h3>Your cart <ion-icon name="cart"></ion-icon></h3>
+        <h3>Your cart <ion-icon name="cart"></ion-icon>
+        </h3>
 
         <br><br>
         <div id="carrito-contenedor">
- 
+
         </div>
         <!--button id="cerrar">Cerrar</button-->
 
@@ -176,10 +199,14 @@
           <input id="totalP" type="text" value="$0">
         </div>
 
-        <button id="cerrar" type="button" class="btn btn-success btn-carrito"><ion-icon name="close-circle"></ion-icon> Close</button>
+        <button id="cerrar" type="button" class="btn btn-success btn-carrito">
+          <ion-icon name="close-circle"></ion-icon> Close
+        </button>
         <!--button id="comprar">Comprar</button-->
-        <button id="comprar" type="button" class="btn btn-primary btn-carrito"> <ion-icon name="card"></ion-icon> Buy</button><br>
-         
+        <button id="comprar" type="button" class="btn btn-primary btn-carrito">
+          <ion-icon name="card"></ion-icon> Buy
+        </button><br>
+
       </div>
     </div>
 
@@ -189,15 +216,17 @@
         <h3>End order</h3>
         <br><br>
         <div id="carrito-contenedor2">
-          <p>Enter your data to send your order:</p><br> 
-            <input type="text" id="inputNombre2" placeholder="Name "><br><br>
-            <input type="tel"  id="inputTelefono2" placeholder="Cellpone number"><br><br>
-            <input type="email"  id="inputEmail2" placeholder="Email"><br><br>
-            <p id="productosComprados2"></p>
-            <input type="submit" class="btn orange white-text" id="submit" value="Enviar">
+          <p>Enter your data to send your order:</p><br>
+          <input type="text" id="inputNombre2" placeholder="Name "><br><br>
+          <input type="tel" id="inputTelefono2" placeholder="Cellpone number"><br><br>
+          <input type="email" id="inputEmail2" placeholder="Email"><br><br>
+          <p id="productosComprados2"></p>
+          <input type="submit" class="btn orange white-text" id="submit" value="Enviar">
         </div>
         <!--button id="cerrar">Cerrar</button-->
-        <button id="enviar" type="button" class="btn btn-success btn-carrito"> <ion-icon name="card"></ion-icon> Send</button>
+        <button id="enviar" type="button" class="btn btn-success btn-carrito">
+          <ion-icon name="card"></ion-icon> Send
+        </button>
         <button id="cancelar" type="button" class="btn btn-success btn-carrito">Cancel</button>
       </div>
     </div>
@@ -243,7 +272,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-    <!--Ionic--> 
+  <!--Ionic-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
   <!-- Parte de JavaScrip de AOS -->

@@ -30,3 +30,5 @@ document.addEventListener('submit', (e) => {
     guardarDatosDeUsr()
     //¿Esto lo permite sin existir porque no se está ocupando?
 })
+
+export{inputNombre, inputEmail, inputTelefono}

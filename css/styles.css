@@ -597,9 +597,7 @@ iframe {
     font-size: 15px;
 }
 
-.imagen_footer {
-    max-width: 120px;
-}
+
 
 /*ABAJO ES PARA TABLET TABLET*/
 @media (min-width: 577px) and (max-width: 768px) {

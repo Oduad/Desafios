@@ -1,4 +1,5 @@
 import { swa } from "./creatinas.js";
+import{inputNombre, inputEmail, inputTelefono} from "./mainForm.js" 
 
 const modalContenedor = document.querySelector('.modal-container'); //El punto . es por el QueryS
 const abrirCarrito = document.getElementById('open')
@@ -24,9 +25,20 @@ abrirFormulario.addEventListener('click',()=>{
 }) 
 
 enviar.addEventListener('click',()=>{
-    modalContenedor2.classList.toggle('modal-active2')
-    modalContenedor.classList.toggle('modal-active')
-    //swa(`Gracias por su compra`, "DodgerBlue", 1000, 'success')
+    console.log("El valor es: "+inputNombre.value)
+    if(inputNombre.value ==''){
+        swa(`Por favor, ingrese su nombre.`, "DodgerBlue", 1000, 'success')
+    }
+    else if(inputTelefono.value ==''){
+        swa(`Por favor, ingrese su número de celular.`, "DodgerBlue", 1000, 'success')
+    }
+    else if(inputEmail.value ==''){
+        swa(`Por favor, ingrese su email.`, "DodgerBlue", 1000, 'success')
+    }else{
+        modalContenedor.classList.toggle('modal-active')
+        modalContenedor2.classList.toggle('modal-active2')
+        swa(`Muchas gracias por su compra, ${inputNombre.value}.`, "DodgerBlue", 1000, 'success')
+    }
 })
 
 cancelar.addEventListener('click',()=>{

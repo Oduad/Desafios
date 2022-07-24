@@ -1,4 +1,4 @@
-[
+const productosBD = [
     {
         "id": 1,
         "nombre": "Carnivor",
@@ -120,7 +120,7 @@
         "pais": "EUA"
     },
     {
-        "id": 1,
+        "id": 13,
         "nombre": "Creatina 1",
         "poster": "../img/creatina1.jpg",
         "precio": "500",
@@ -130,7 +130,7 @@
         "pais": "EUA"
     },
     {
-        "id": 2,
+        "id": 14,
         "nombre": "Creatina 2",
         "poster": "../img/creatina2.jpg",
         "precio": "450",
@@ -140,7 +140,7 @@
         "pais": "EUA"
     },
     {
-        "id": 3,
+        "id": 15,
         "nombre": "Creatina 3",
         "poster": "../img/creatina3.jpg",
         "precio": "550",
@@ -150,7 +150,7 @@
         "pais": "EUA"
     },
     {
-        "id": 4,
+        "id": 16,
         "nombre": "Creatina 4",
         "poster": "../img/creatina4.jpg",
         "precio": "500",
@@ -160,7 +160,7 @@
         "pais": "EUA"
     },
     {
-        "id": 1,
+        "id": 17,
         "nombre": "Prenda 1",
         "poster": "../img/ropaf1.jpg",
         "precio": "980",
@@ -170,7 +170,7 @@
         "pais": "EUA"
     },
     {
-        "id": 2,
+        "id": 18,
         "nombre": "Prenda 2",
         "poster": "../img/ropaf2.jpg",
         "precio": "1100",
@@ -180,7 +180,7 @@
         "pais": "EUA"
     },
     {
-        "id": 3,
+        "id": 19,
         "nombre": "Prenda 3",
         "poster": "../img/ropaf3.jpg",
         "precio": "1250",
@@ -190,7 +190,7 @@
         "pais": "EUA"
     },
     {
-        "id": 4,
+        "id": 20,
         "nombre": "Prenda 4",
         "poster": "../img/ropaf4.jpg",
         "precio": "1650",
@@ -200,7 +200,7 @@
         "pais": "EUA"
     },
     {
-        "id": 5,
+        "id": 21,
         "nombre": "Prenda 5",
         "poster": "../img/ropaf5.jpg",
         "precio": "1500",
@@ -210,7 +210,7 @@
         "pais": "EUA"
     },
     {
-        "id": 6,
+        "id": 22,
         "nombre": "Prenda 6",
         "poster": "../img/ropaf6.jpg",
         "precio": "1500",
@@ -220,7 +220,7 @@
         "pais": "EUA"
     },
     {
-        "id": 7,
+        "id": 23,
         "nombre": "Prenda 7",
         "poster": "../img/ropaf7.jpg",
         "precio": "1300",
@@ -230,7 +230,7 @@
         "pais": "EUA"
     },
     {
-        "id": 8,
+        "id": 24,
         "nombre": "Prenda 8",
         "poster": "../img/ropaf8.jpg",
         "precio": "1100",
@@ -240,7 +240,7 @@
         "pais": "EUA"
     },
     {
-        "id": 9,
+        "id": 25,
         "nombre": "Prenda 9",
         "poster": "../img/ropaf9.jpg",
         "precio": "1000",
@@ -250,7 +250,7 @@
         "pais": "EUA"
     },
     {
-        "id": 10,
+        "id": 26,
         "nombre": "Prenda 10",
         "poster": "../img/ropaf10.jpg",
         "precio": "1200",
@@ -260,7 +260,7 @@
         "pais": "EUA"
     },
     {
-        "id": 11,
+        "id": 27,
         "nombre": "Prenda 11",
         "poster": "../img/ropaf11.jpg",
         "precio": "1050",
@@ -270,7 +270,7 @@
         "pais": "EUA"
     },
     {
-        "id": 12,
+        "id": 28,
         "nombre": "Prenda 12",
         "poster": "../img/ropaf12.jpg",
         "precio": "1200",
@@ -280,7 +280,7 @@
         "pais": "EUA"
     },
     {
-        "id": 1,
+        "id": 29,
         "nombre": "Prenda 1",
         "poster": "../img/ropam1.jpg",
         "precio": "780",
@@ -290,7 +290,7 @@
         "pais": "EUA"
     },
     {
-        "id": 2,
+        "id": 30,
         "nombre": "Prenda 2",
         "poster": "../img/ropam2.jpg",
         "precio": "600",
@@ -300,7 +300,7 @@
         "pais": "EUA"
     },
     {
-        "id": 3,
+        "id": 31,
         "nombre": "Prenda 3",
         "poster": "../img/ropam3.jpg",
         "precio": "650",
@@ -310,7 +310,7 @@
         "pais": "EUA"
     },
     {
-        "id": 4,
+        "id": 32,
         "nombre": "Prenda 4",
         "poster": "../img/ropam4.jpg",
         "precio": "680",
@@ -320,7 +320,7 @@
         "pais": "EUA"
     },
     {
-        "id": 5,
+        "id": 33,
         "nombre": "Prenda 5",
         "poster": "../img/ropam5.jpg",
         "precio": "590",
@@ -330,7 +330,7 @@
         "pais": "EUA"
     },
     {
-        "id": 6,
+        "id": 34,
         "nombre": "Prenda 6",
         "poster": "../img/ropam6.jpg",
         "precio": "700",
@@ -340,7 +340,7 @@
         "pais": "EUA"
     },
     {
-        "id": 7,
+        "id": 35,
         "nombre": "Prenda 7",
         "poster": "../img/ropam7.jpg",
         "precio": "750",
@@ -350,7 +350,7 @@
         "pais": "EUA"
     },
     {
-        "id": 8,
+        "id": 36,
         "nombre": "Prenda 8",
         "poster": "../img/ropam8.jpg",
         "precio": "700",
@@ -360,7 +360,7 @@
         "pais": "EUA"
     },
     {
-        "id": 9,
+        "id": 37,
         "nombre": "Prenda 9",
         "poster": "../img/ropam9.jpg",
         "precio": "1300",
@@ -370,7 +370,7 @@
         "pais": "EUA"
     },
     {
-        "id": 10,
+        "id": 38,
         "nombre": "Prenda 10",
         "poster": "../img/ropam10.jpg",
         "precio": "1350",
@@ -380,7 +380,7 @@
         "pais": "EUA"
     },
     {
-        "id": 11,
+        "id": 39,
         "nombre": "Prenda 11",
         "poster": "../img/ropam11.jpg",
         "precio": "1250",
@@ -390,7 +390,7 @@
         "pais": "EUA"
     },
     {
-        "id": 12,
+        "id": 40,
         "nombre": "Prenda 12",
         "poster": "../img/ropam12.jpg",
         "precio": "1400",
@@ -400,3 +400,5 @@
         "pais": "EUA"
     }
 ]
+
+//]export { productosBD };

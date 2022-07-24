@@ -54,7 +54,6 @@ const obtenerContenido = (URL) => {
         obtenerContenido(URL)
     },500)
 })
-
 ver.addEventListener("click",()=>{
         obtenerContenido(URL)
 }
@@ -144,6 +143,9 @@ agregarP.addEventListener('click', () => {
             td.innerHTML = producto.precio;
             fila.appendChild(td);
 
+            console.log(productos)
+            guardarDatosDePr()
+
             td = document.createElement('td');
             botonEliminar = document.createElement('button')
 
@@ -155,7 +157,11 @@ agregarP.addEventListener('click', () => {
             botonEliminar.classList.add('btn-success');
 
             botonEliminar.addEventListener("click", (event) => {
+                console.log("Eliminado es "+producto.id)
+                productos.splice(Number(producto.id)-1,1)
                 event.target.parentNode.remove();
+                eliminarId()
+                console.log(productos)
             })
             cuerpoTabla.appendChild(fila)
             tablaProducto.appendChild(cuerpoTabla)
@@ -180,3 +186,29 @@ function eliminarId() {
     id -= 1;
     return id
 }
+
+function guardarDatosDePr() {
+    const datosDeUsr = {
+        nombre: nombre.value,
+        marca: marca.value,
+        categoria: categoria.value,
+        precio: precio.value
+    }
+    //localStorage.setItem("datosDeUsuario", datosDeUsuario)
+    //*La línea de arriba guarda un [object, Object], por eso procedemos así:
+    let str = JSON.stringify(datosDeUsr)
+    localStorage.setItem("datosDeUsr", str)
+    //*Pasó porque almacenaba JSON que es un String con un formato específico
+}
+
+function recuperoDatosDePr() {
+    if (localStorage.getItem("datosDeUsr")) {
+        const datosDeUsr = JSON.parse(localStorage.getItem("datosDeUsr"))
+        nombre.value = datosDeUsr.nombre;
+        marca.value = datosDeUsr.marca;
+        categoria.value = datosDeUsr.categoria;
+        precio.value = datosDeUsr.precio;
+    }
+}
+
+recuperoDatosDePr()

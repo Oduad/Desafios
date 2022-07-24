@@ -237,9 +237,18 @@ a:hover {
     outline-style: auto;
 }*/
 
+/*Suplemento/Add*/
+
+.btn-eliminarF{
+    padding: 4px;
+}
+
+tr{ 
+    height: 20px; 
+} 
 
 /*Suplemento/Proteínas contenedor DESKTOP*/
-#proteinas-contenedor, #ropaf-contenedor, #ropam-contenedor{
+#proteinas-contenedor, #ropaf-contenedor, #ropam-contenedor, #agregar-contenedor{
     display: grid;
     margin: 50px auto;
     display: flex;
@@ -299,7 +308,11 @@ a:hover {
 }
 
 .btn-carrito {
-    margin: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 15px;
 }
 
 .fondo-inputs {
@@ -632,6 +645,14 @@ iframe {
         min-height: 50vh;
       }
 
+      .btn-carrito {
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
 }
 
 /*CELPHONE*/
@@ -805,6 +826,14 @@ iframe {
 
     .col-footer {
         font-size: 13px;
+    }
+
+    .btn-carrito {
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 12.5px;
     }
 
 }

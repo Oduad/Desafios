@@ -53,7 +53,7 @@ let pagoTotal = 0;
 
 const obtenerContenido = (URL) => {
     //let cardsAmostrar = ""
-    const contenedorProductos = document.getElementById('proteinas-contenedor');
+    const contenedorProductos = document.getElementById("proteinas-contenedor");
     fetch(URL)
         .then((response) => response.json())
         .then((data) => {
@@ -166,6 +166,7 @@ const carritoIndex2 = (productoId) => {
             renderProductoCarrito()
         })
 }
+
 
 //Dudas
 //1. ¿En las líneas 5 no sería mejor var? const porque siempre se pide

@@ -35,6 +35,7 @@ enviar.addEventListener('click',()=>{
     else if(inputEmail.value ==''){
         swa(`Por favor, ingrese su email.`, "DodgerBlue", 1000, 'success')
     }else{
+        //guardarDatosDePr()
         modalContenedor.classList.toggle('modal-active')
         modalContenedor2.classList.toggle('modal-active2')
         swa(`Muchas gracias por su compra, ${inputNombre.value}.`, "DodgerBlue", 1000, 'success')
@@ -59,3 +60,29 @@ const tutor = document.getElementById('tutor');
 tutor.addEventListener('click', () => {
     swa(`Agradecimientos al tutor Julio César Caro Cota por su tiempo en cada una de las dudas.`, "#eeccff", 4000, 'success')
 })
+
+/*function guardarDatosDePr(){
+    const datosDeUsr = {
+        nombre: nombre.value,
+        marca: marca.value,
+        categoria: categoria.value,
+        precio: precio.value
+    }
+    //localStorage.setItem("datosDeUsuario", datosDeUsuario)
+    //*La línea de arriba guarda un [object, Object], por eso procedemos así:
+    let str = JSON.stringify(datosDeUsr) 
+    localStorage.setItem("datosDeUsr", str)
+    //*Pasó porque almacenaba JSON que es un String con un formato específico
+}
+
+function recuperoDatosDePr(){
+    if(localStorage.getItem("datosDeUsr")){
+        const datosDeUsr = JSON.parse(localStorage.getItem("datosDeUsr"))
+        nombre.value = datosDeUsr.nombre;
+        marca.value = datosDeUsr.marca;
+        categoria.value = datosDeUsr.categoria;
+        precio.value = datosDeUsr.precio;
+    }
+}
+
+recuperoDatosDePr()*/

@@ -27,17 +27,17 @@ abrirFormulario.addEventListener('click',()=>{
 enviar.addEventListener('click',()=>{
     console.log("El valor es: "+inputNombre.value)
     if(inputNombre.value ==''){
-        swa(`Por favor, ingrese su nombre.`, "DodgerBlue", 1000, 'success')
+        swa(`Por favor, ingrese su nombre. &#9998;`, "DodgerBlue", 1000, 'success')
     }
     else if(inputTelefono.value ==''){
-        swa(`Por favor, ingrese su número de celular.`, "DodgerBlue", 1000, 'success')
+        swa(`Por favor, ingrese su número de celular. &#9998;`, "DodgerBlue", 1000, 'success')
     }
     else if(inputEmail.value ==''){
-        swa(`Por favor, ingrese su email.`, "DodgerBlue", 1000, 'success')
+        swa(`Por favor, ingrese su email. &#9998;`, "DodgerBlue", 1000, 'success')
     }else{
         modalContenedor.classList.toggle('modal-active')
         modalContenedor2.classList.toggle('modal-active2')
-        swa(`Muchas gracias por su compra, ${inputNombre.value}.`, "DodgerBlue", 1000, 'success')
+        swa(`Muchas gracias por su compra, ${inputNombre.value}. &#128512; &#128512;`, "DodgerBlue", 2000, 'success')
     }
 })
 
@@ -50,12 +50,12 @@ cancelar.addEventListener('click',()=>{
 const profesor = document.getElementById('profesor');
 
 profesor.addEventListener('click', () => {
-    swa(`Agradecimientos al profesor Fernando Luna por su entrega y dedicación en cada clase.`, "#b3ffb3", 4000, 'success')
+    swa(`Agradecimientos al profesor Fernando Luna por su entrega y dedicación en cada clase. <br> &#127891 &#127891; &#127891;`, "#b3ffb3", 4000, 'success')
     
 })
 
 const tutor = document.getElementById('tutor');
 
 tutor.addEventListener('click', () => {
-    swa(`Agradecimientos al tutor Julio César Caro Cota por su tiempo en cada una de las dudas.`, "#b3ffb3", 4000, 'success')
+    swa(`Agradecimientos al tutor Julio César Caro Cota por su tiempo dedicado a aclarar cada una de mis dudas. <br> &#127891 &#127891; &#127891;`, "#b3ffb3", 4000, 'success')
 })

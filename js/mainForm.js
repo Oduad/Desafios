@@ -1,9 +1,9 @@
 const inputNombre = document.querySelector("#inputNombre2")
 const inputTelefono = document.querySelector("#inputTelefono2")
 const inputEmail = document.querySelector("#inputEmail2")
-const btnSubmit = document.querySelector("#submit")
+//const btnSubmit = document.querySelector("#submit")
 
-let datosDeInput = ""
+//let datosDeInput = ""
 
 inputNombre.addEventListener("focus", () => {
     inputNombre.className = "fondo-inputs"

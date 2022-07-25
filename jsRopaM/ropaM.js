@@ -32,7 +32,6 @@ const retornoCardContenido = (contenido) => {
         </div>
         <br>
     </div>`
-    
 }
 
 const retornoError = () => {
@@ -88,10 +87,10 @@ const obtenerContenido = (URL) => {
                     pagoF.value = "$"+pagoTotal;
                     carritoIndex2(id);
                     guardarDatos2(contenido);
-                    swa(`${nombre} agregado al carrito y llevas $${pagoTotal} `, "DodgerBlue", 1000, 'success')
+                    swa(`${nombre} agregado al carrito y llevas $${pagoTotal}. &#128077;`, "DodgerBlue", 1000, 'success')
                 })
             }
-                swa(`Se han cargado los productos disponibles`, "DodgerBlue", 1000, 'success')
+                swa(`Se han cargado los productos disponibles. &#128526;`, "DodgerBlue", 1000, 'success')
             }
             //contenidoDOM.innerHTML=cardsAmostrar
         })
@@ -156,13 +155,25 @@ const carritoIndex2 = (productoId) => {
                     let pago = Number(producto.precio);  
                     pagoTotal -= pago;
                     pagoF.value = "$"+pagoTotal;
-                    swa(`${producto.nombre} eliminado del carrito`, "DodgerBlue", 1000, 'success')
+                    swa(`${producto.nombre} eliminado del carrito. &#128077;`, "DodgerBlue", 1000, 'success')
                 })
                 const botonFinalizarPedido = document.getElementById(`comprar`);
                 botonFinalizarPedido.addEventListener('click', () => {
-                    swa(`Llene el formulario para comprar`, "DodgerBlue", 1000, 'success')
+                    swa(`Llene el formulario para comprar. &#9998;`, "DodgerBlue", 1000, 'success')
             })
             }
             renderProductoCarrito()
         })
 }
+
+//Dudas
+//1. ¿En las líneas 5 no sería mejor var? const porque siempre se pide
+//2. ¿Qué tan difícil es lo que falta de clases?
+//3. ¿Dónde está el after de DOM y Eventos?
+//4. ¿Cómo haría la sesión  grandes rasgos? Hay un botón de administtración
+// y hay yun login con usuario y contraeña. Con una librería se encripta información. Hay una llave
+// Se tiene una BD o un control de accesos y a través de un servicio se hace una solicitud.
+// Hacer página y formulario y que me lleve al formulario de alto.
+// DOJO's para lenguajes de programación - El recomendado es el toolkit que son ejercicios de entrenamiento
+// Adoptando la lógica,  
+//¿Se viene encapsulamiento y qué más en JS?

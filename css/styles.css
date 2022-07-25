@@ -269,6 +269,11 @@ tr{
     margin: 28px;
 }
 
+.card2 {
+    margin: 20px;
+    padding: 2px;
+}
+
 .modal-container {
     display: flex;
     align-items: center;

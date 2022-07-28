@@ -21,6 +21,7 @@ boton.addEventListener('click', () => {
     let altura = Number(document.getElementById('inputHeight').value);
     let imc = (masa / (altura * altura)).toFixed(2);
     let caso = '';
+    let numeros =[0,1,2,3,4,5,6,7,8,9]
 
     if (imc < 15) {
         caso = 'Delgadez muy Severa'
@@ -60,12 +61,16 @@ boton.addEventListener('click', () => {
         swa(`Por favor, ingrese el su masa en kg.`, "DodgerBlue", 4000, 'success')
     }
     else if(altura>2.53 || altura<0.73){
-        swa(`Nadie en la tierra tiene esa estatura. Ingrésala nuevamente.`, "DodgerBlue", 4000, 'success')
+        swa(`Nadie en la tierra tiene una estatura de ${altura} m. Ingrésala nuevamente.`, "DodgerBlue", 4000, 'success')
     }
     else if(masa>300){
-        swa(`Nadie en la tierra tiene esa masa. Ingrésala nuevamente.`, "DodgerBlue", 4000, 'success')
+        swa(`Ningún humano en la tierra tiene masa una masa mayor a 300 kg. Ingrésala nuevamente.`, "DodgerBlue", 4000, 'success')
     }
-    else if(nombre == "Xochitl" || nombre == "xochitl"){
+    /*else if(nombre.forEach(element => {
+       element.includes(numeros);}) 
+    {
+    swa(`${nombre}, Es imposible que tu nombre contenga un número. Introdúcelo nuevamente.`, 4000, 'success')}*/
+    else if(nombre == "Perla" || nombre == "perla" || nombre=="Elizabeth"){
         swa(`${nombre}, eres especial para Oduad\n Tu IMC es ${imc} \n Estás en ${caso}`, "DodgerBlue", 4000, 'success')
     }else{
     swa(`${nombre}\n Su IMC es ${imc} \n Está en ${caso}`, "DodgerBlue", 3000, 'success')}
